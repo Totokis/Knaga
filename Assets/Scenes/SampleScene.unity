@@ -1487,7 +1487,7 @@ Transform:
   m_GameObject: {fileID: 566879303}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 16.1812, y: -0.2564, z: 0}
+  m_LocalPosition: {x: 16.1812, y: 1.27, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -1903,7 +1903,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 6, y: 6}
+    oldSize: {x: 3.44, y: 5.14}
     newSize: {x: 6, y: 6}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -1981,9 +1981,9 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
-  m_Sprite: {fileID: -771975507488873875, guid: e6e7de70dd2816846806bcb38d87eaa9, type: 3}
-  m_Color: {r: 0.2, g: 1, b: 0.2, a: 1}
+  m_SortingOrder: 43
+  m_Sprite: {fileID: -6593966732401781576, guid: 983a484529d3b464289b479988500c5c, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -2002,8 +2002,8 @@ Transform:
   m_GameObject: {fileID: 975568190}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 10, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: 10.1864, y: -1.3815, z: 0}
+  m_LocalScale: {x: 1.1084, y: 1.1084, z: 1.1084}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -2040,6 +2040,9 @@ MonoBehaviour:
   deceleration: 50
   leftBound: -4
   groundY: -2
+  walkAnimationParameter: IsWalking
+  speedAnimationParameter: Speed
+  minSpeedForAnimation: 0.1
 --- !u!95 &975568198
 Animator:
   serializedVersion: 7
@@ -2050,7 +2053,7 @@ Animator:
   m_GameObject: {fileID: 975568190}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: a2d54745c0ded2942aa3c6ad69a92770, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -2979,7 +2982,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 6
   m_Sprite: {fileID: 5143338009603915975, guid: a0aac77149633f34281f1b778bd4b87c, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 1
@@ -3138,15 +3141,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   floorSegmentPrefab: {fileID: 5618975466953897395, guid: eb59530738a1d0d4f923ad6958228f24, type: 3}
-  backgroundSegmentPrefab: {fileID: 0}
-  ceilingSegmentPrefab: {fileID: 0}
+  backgroundSegmentPrefab: {fileID: 494934566399239865, guid: 9f9cf93e6d3e0f24784dbb75388cb0a5, type: 3}
+  ceilingSegmentPrefab: {fileID: 5851734090068483234, guid: b4be72f512094e842b5951ab9b4aa847, type: 3}
   initialSegments: 30
   startX: -10
   floorSegmentWidth: 10
   backgroundSegmentWidth: 10
   ceilingSegmentWidth: 10
-  floorY: -3
-  backgroundY: 0
+  floorY: -7.7
+  backgroundY: 0.07
   backgroundZ: 2
   ceilingY: 3
   enableDynamicGeneration: 1
