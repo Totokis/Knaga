@@ -3,7 +3,6 @@ using UnityEngine;
 
 public class SteppableObject : MonoBehaviour
 {
-    [SerializeField] private GameObject normalObject;
     [SerializeField] private GameObject steppedObject;
     
     
@@ -11,7 +10,7 @@ public class SteppableObject : MonoBehaviour
     {
         if (other.GetComponent<GórnikKontroller>() != null)
         {
-            normalObject.SetActive(false);
+            
             steppedObject.SetActive(true);
         }
     }
@@ -20,7 +19,6 @@ public class SteppableObject : MonoBehaviour
     {
         if (other.GetComponent<GórnikKontroller>() != null)
         {
-            normalObject.SetActive(true);
             steppedObject.SetActive(false);
         }
     }

@@ -103,13 +103,13 @@ TextureImporter:
       name: take4_0
       rect:
         serializedVersion: 2
-        x: 145
-        y: 15
-        width: 312
-        height: 468
+        x: 0
+        y: 0
+        width: 520
+        height: 572
       alignment: 9
-      pivot: {x: 0.29200774, y: 0.016828973}
-      border: {x: 0, y: 0, z: 0, w: 0}
+      pivot: {x: 0.5099679, y: 0.38919333}
+      border: {x: 0, y: 222, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
