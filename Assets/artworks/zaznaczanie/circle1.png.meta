@@ -1,10 +1,22 @@
 fileFormatVersion: 2
-guid: 7ebea3e247106e24f8834dc41a6478f0
+guid: 105c894cfbf770e409e9af9852206220
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -5329378668247476813
-    second: take5_0
+      213: -2684344430345912852
+    second: circle1_0
+  - first:
+      213: -161951825181683539
+    second: circle1_1
+  - first:
+      213: -3410100408904674580
+    second: circle1_2
+  - first:
+      213: 371480269030024442
+    second: circle1_3
+  - first:
+      213: 7243980020074282759
+    second: circle1_4
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -100,23 +112,111 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: take5_0
+      name: circle1_0
       rect:
         serializedVersion: 2
-        x: 154
-        y: 15
-        width: 347
-        height: 412
-      alignment: 9
-      pivot: {x: 0.2397238, y: 0.02422641}
+        x: 334
+        y: 777
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 3b59095665e3a06b0800000000000000
-      internalID: -5329378668247476813
+      spriteID: cedfe6e76fa4fbad0800000000000000
+      internalID: -2684344430345912852
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: circle1_1
+      rect:
+        serializedVersion: 2
+        x: 949
+        y: 386
+        width: 638
+        height: 288
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: da0d15d4ca1a0cdf0800000000000000
+      internalID: -161951825181683539
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: circle1_2
+      rect:
+        serializedVersion: 2
+        x: 1756
+        y: 652
+        width: 14
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ce292dedeb3eca0d0800000000000000
+      internalID: -3410100408904674580
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: circle1_3
+      rect:
+        serializedVersion: 2
+        x: 692
+        y: 458
+        width: 8
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: af4e9942653c72500800000000000000
+      internalID: 371480269030024442
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: circle1_4
+      rect:
+        serializedVersion: 2
+        x: 948
+        y: 385
+        width: 51
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 70ffd80b279c78460800000000000000
+      internalID: 7243980020074282759
       vertices: []
       indices: 
       edges: []
@@ -125,7 +225,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 43fe06cf73c9fed428dbce5eaa6da0d3
+    spriteID: 
     internalID: 0
     vertices: []
     indices: 
@@ -135,7 +235,11 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      take5_0: -5329378668247476813
+      circle1_0: -2684344430345912852
+      circle1_1: -161951825181683539
+      circle1_2: -3410100408904674580
+      circle1_3: 371480269030024442
+      circle1_4: 7243980020074282759
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
