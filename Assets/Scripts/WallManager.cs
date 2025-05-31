@@ -11,6 +11,13 @@ public class WallManager : MonoBehaviour
     [SerializeField] public int numberOfSegments = 20;
     [SerializeField] public float segmentSpacing = 1f;
     
+    [Header("Loot Settings")]
+    [SerializeField] public GameObject itemDropPrefab;
+    [SerializeField] public string dropItemName = "Ore";
+    [SerializeField] public int minDropAmount = 1;
+    [SerializeField] public int maxDropAmount = 3;
+    [SerializeField] public Color itemColor = new Color(0.5f, 0.5f, 0.5f, 1f);
+    
     private List<GameObject> wallSegments = new List<GameObject>();
     
     void Start()
@@ -32,7 +39,6 @@ public class WallManager : MonoBehaviour
             if (child.CompareTag("WallSegment"))
             {
                 wallSegments.Add(child.gameObject);
-                // Upewnij się że ściana ma collider który nie jest triggerem
                 BoxCollider2D col = child.GetComponent<BoxCollider2D>();
                 if (col != null && col.isTrigger)
                 {
@@ -79,7 +85,6 @@ public class WallManager : MonoBehaviour
             newSegment.tag = "WallSegment";
         }
         
-        // Upewnij się że collider nie jest triggerem
         BoxCollider2D col = newSegment.GetComponent<BoxCollider2D>();
         if (col != null)
         {
@@ -92,8 +97,13 @@ public class WallManager : MonoBehaviour
     
     public void OnWallDestroyed(GameObject destroyedWall)
     {
+        // Drop item at wall position
+        DropItem(destroyedWall.transform.position);
+        
+        // Remove from list
         wallSegments.Remove(destroyedWall);
         
+        // Generate new wall segment
         if (wallSegments.Count > 0)
         {
             GameObject rightmostWall = wallSegments.OrderBy(w => w.transform.position.x).Last();
@@ -102,5 +112,50 @@ public class WallManager : MonoBehaviour
             
             CreateWallSegment(maxX + segmentSpacing, wallY, wallSegments.Count + 100);
         }
+    }
+    
+    void DropItem(Vector3 position)
+    {
+        GameObject droppedItem = null;
+        
+        if (itemDropPrefab != null)
+        {
+            // Use prefab
+            droppedItem = Instantiate(itemDropPrefab);
+        }
+        else
+        {
+            // Create item from scratch
+            droppedItem = new GameObject("DroppedItem");
+            droppedItem.AddComponent<SpriteRenderer>();
+            droppedItem.AddComponent<CircleCollider2D>();
+        }
+        
+        // Position on ground
+        droppedItem.transform.position = new Vector3(position.x, -2.5f, 0);
+        
+        // Add ItemPickup component
+        ItemPickup pickup = droppedItem.GetComponent<ItemPickup>();
+        if (pickup == null)
+        {
+            pickup = droppedItem.AddComponent<ItemPickup>();
+        }
+        
+        // Setup item data
+        int dropAmount = Random.Range(minDropAmount, maxDropAmount + 1);
+        pickup.itemData = new Item(dropItemName, dropAmount);
+        pickup.itemData.color = itemColor;
+        
+        // Setup sprite
+        SpriteRenderer sr = droppedItem.GetComponent<SpriteRenderer>();
+        if (sr != null)
+        {
+            sr.sprite = Resources.Load<Sprite>("whitesquare");
+            sr.color = itemColor;
+            sr.sortingOrder = 1;
+            droppedItem.transform.localScale = new Vector3(0.5f, 0.5f, 1f);
+        }
+        
+        Debug.Log($"Dropped {dropAmount} {dropItemName} at position {position}");
     }
 }
