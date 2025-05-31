@@ -7,6 +7,9 @@ public class KombajnController : MonoBehaviour
     public float stopDistance = 0.1f;
     public bool autoMove = true;
     
+    // IMPORTANT: Kombajn moves AUTOMATICALLY - it is NOT player controlled!
+    // The camera should NOT follow this object - it follows the Player
+    
     private Rigidbody2D rb;
     private bool isMoving = false;
     private bool shouldMove = false;
@@ -26,6 +29,9 @@ public class KombajnController : MonoBehaviour
         {
             StartMoving();
         }
+        
+        // DO NOT make camera follow this object!
+        // Kombajn is an autonomous mining machine, not the player character
     }
     
     void FixedUpdate()

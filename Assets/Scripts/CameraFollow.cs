@@ -10,23 +10,21 @@ public class CameraFollow : MonoBehaviour
     {
         if (target == null)
         {
-            // First try to find KombajnMain
-            GameObject kombajn = GameObject.Find("KombajnMain");
-            if (kombajn != null)
+            // IMPORTANT: Camera should ALWAYS follow the Player, NOT the Kombajn!
+            // DO NOT CHANGE THIS - The player needs to see where they're going
+            GameObject player = GameObject.Find("Player");
+            if (player != null)
             {
-                target = kombajn.transform;
-                Debug.Log("Camera following KombajnMain");
+                target = player.transform;
+                Debug.Log("Camera following Player (CORRECT - DO NOT CHANGE)");
             }
             else
             {
-                // Fallback to player
-                GameObject player = GameObject.Find("Player");
-                if (player != null)
-                {
-                    target = player.transform;
-                    Debug.Log("Camera following Player");
-                }
+                Debug.LogWarning("Player not found! Camera has no target.");
             }
+            
+            // NEVER make camera follow Kombajn - it moves automatically
+            // and player needs to control their own character
         }
     }
     
@@ -39,4 +37,8 @@ public class CameraFollow : MonoBehaviour
             transform.position = smoothedPosition;
         }
     }
+    
+    // WARNING: This camera script should ALWAYS follow the PLAYER
+    // The Kombajn moves on its own and following it would make the game unplayable
+    // DO NOT CHANGE the target to Kombajn or KombajnMain!
 }
