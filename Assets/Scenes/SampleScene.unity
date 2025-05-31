@@ -1650,7 +1650,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   wallSegmentPrefab: {fileID: 5460429056039791012, guid: 25df9f69ae9998447be0baaeb7e97fa7, type: 3}
   numberOfSegments: 20
-  segmentSpacing: 2.7
+  segmentSpacing: 6
   itemDropPrefab: {fileID: 0}
   dropItemName: Ore
   minDropAmount: 1
@@ -2980,12 +2980,20 @@ PrefabInstance:
     m_TransformParent: {fileID: 892174262}
     m_Modifications:
     - target: {fileID: 2547439464390918348, guid: 25df9f69ae9998447be0baaeb7e97fa7, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.9572663
+      objectReference: {fileID: 0}
+    - target: {fileID: 2547439464390918348, guid: 25df9f69ae9998447be0baaeb7e97fa7, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1.0888686
+      objectReference: {fileID: 0}
+    - target: {fileID: 2547439464390918348, guid: 25df9f69ae9998447be0baaeb7e97fa7, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 33.6666
+      value: 34.918
       objectReference: {fileID: 0}
     - target: {fileID: 2547439464390918348, guid: 25df9f69ae9998447be0baaeb7e97fa7, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.3418
+      value: 3.889
       objectReference: {fileID: 0}
     - target: {fileID: 2547439464390918348, guid: 25df9f69ae9998447be0baaeb7e97fa7, type: 3}
       propertyPath: m_LocalPosition.z
