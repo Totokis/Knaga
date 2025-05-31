@@ -3,34 +3,23 @@ using System.Collections.Generic;
 
 public class WallManager : MonoBehaviour
 {
-    [Header("Wall Generation Settings")]
-    public GameObject wallSegmentPrefab;
-    public int numberOfSegments = 20;
-    public float segmentSpacing = 1f;
-    public float startX = 25f;
+    [Header("Wall Prefab")]
+    [SerializeField] public GameObject wallSegmentPrefab;
     
-    [Header("Wall Properties")]
-    public Color wallColor = new Color(0.6f, 0.4f, 0.2f, 1f);
+    [Header("Wall Generation Settings")]
+    [SerializeField] public int numberOfSegments = 20;
+    [SerializeField] public float segmentSpacing = 1f;
+    [SerializeField] public float startX = 25f;
+    [SerializeField] public float wallY = 0f;
     
     private List<GameObject> wallSegments = new List<GameObject>();
-    private Sprite wallSprite;
     
     void Start()
     {
-        // Znajdź pierwszy segment ściany i użyj go jako wzoru
-        GameObject firstSegment = GameObject.Find("WallSegment1");
-        if (firstSegment != null)
+        if (wallSegmentPrefab == null)
         {
-            wallSegmentPrefab = firstSegment;
-            startX = firstSegment.transform.position.x;
-            
-            // Pobierz sprite z pierwszego segmentu
-            SpriteRenderer sr = firstSegment.GetComponent<SpriteRenderer>();
-            if (sr != null)
-            {
-                wallSprite = sr.sprite;
-                wallColor = sr.color;
-            }
+            Debug.LogError("Wall Segment Prefab is not assigned in WallManager!");
+            return;
         }
         
         GenerateWalls();
@@ -38,69 +27,101 @@ public class WallManager : MonoBehaviour
     
     void GenerateWalls()
     {
-        // Dodaj pierwszy segment do listy
-        GameObject firstSegment = GameObject.Find("WallSegment1");
-        if (firstSegment != null)
+        // Clear any existing wall segments first
+        foreach (Transform child in transform)
         {
-            wallSegments.Add(firstSegment);
+            if (child.CompareTag("WallSegment"))
+            {
+                wallSegments.Add(child.gameObject);
+            }
         }
         
-        // Generuj pozostałe segmenty
-        for (int i = 1; i < numberOfSegments; i++)
+        // Generate wall segments
+        int startIndex = wallSegments.Count;
+        for (int i = startIndex; i < numberOfSegments; i++)
         {
             float xPos = startX + (i * segmentSpacing);
             CreateWallSegment(xPos, i + 1);
         }
+        
+        Debug.Log($"Generated {numberOfSegments - startIndex} wall segments. Total: {wallSegments.Count}");
     }
     
-    void CreateWallSegment(float xPosition, int index)
+    GameObject CreateWallSegment(float xPosition, int index)
     {
-        // Klonuj pierwszy segment jeśli mamy prefab
-        GameObject newSegment;
-        
-        if (wallSegmentPrefab != null)
+        if (wallSegmentPrefab == null)
         {
-            newSegment = Instantiate(wallSegmentPrefab);
-            newSegment.name = $"WallSegment{index}";
-            newSegment.transform.position = new Vector3(xPosition, 0, 0);
+            Debug.LogError("Cannot create wall segment - prefab is null!");
+            return null;
         }
-        else
+        
+        // Instantiate the prefab
+        GameObject newSegment = Instantiate(wallSegmentPrefab, transform);
+        newSegment.name = $"WallSegment{index}";
+        newSegment.transform.position = new Vector3(xPosition, wallY, 0);
+        
+        // Ensure it has the correct tag
+        if (!newSegment.CompareTag("WallSegment"))
         {
-            // Tworzymy nowy segment od zera
-            newSegment = new GameObject($"WallSegment{index}");
-            newSegment.transform.position = new Vector3(xPosition, 0, 0);
-            newSegment.transform.localScale = new Vector3(1, 4, 1);
             newSegment.tag = "WallSegment";
-            
-            // Dodaj SpriteRenderer
-            SpriteRenderer sr = newSegment.AddComponent<SpriteRenderer>();
-            sr.color = wallColor;
-            if (wallSprite != null)
-            {
-                sr.sprite = wallSprite;
-            }
-            
-            // Dodaj BoxCollider2D
-            BoxCollider2D collider = newSegment.AddComponent<BoxCollider2D>();
-            collider.size = new Vector2(1, 4);
         }
         
-        // Ustaw parent
-        newSegment.transform.SetParent(transform);
+        // Ensure it has required components
+        if (newSegment.GetComponent<BoxCollider2D>() == null)
+        {
+            Debug.LogWarning($"Wall segment {newSegment.name} is missing BoxCollider2D!");
+        }
+        
+        if (newSegment.GetComponent<SpriteRenderer>() == null)
+        {
+            Debug.LogWarning($"Wall segment {newSegment.name} is missing SpriteRenderer!");
+        }
         
         wallSegments.Add(newSegment);
+        return newSegment;
     }
     
     public void OnWallDestroyed(GameObject destroyedWall)
     {
-        // Usuń z listy
+        // Remove from list
         wallSegments.Remove(destroyedWall);
         
-        // Generuj nowy segment na końcu
-        if (wallSegments.Count > 0)
+        // Generate new segment at the end
+        if (wallSegments.Count > 0 && wallSegments.Count < numberOfSegments)
         {
-            float lastX = wallSegments[wallSegments.Count - 1].transform.position.x;
-            CreateWallSegment(lastX + segmentSpacing, wallSegments.Count + numberOfSegments);
+            // Find the rightmost segment
+            float maxX = -float.MaxValue;
+            foreach (GameObject segment in wallSegments)
+            {
+                if (segment != null && segment.transform.position.x > maxX)
+                {
+                    maxX = segment.transform.position.x;
+                }
+            }
+            
+            // Create new segment
+            GameObject newSegment = CreateWallSegment(maxX + segmentSpacing, wallSegments.Count + 100);
+            if (newSegment != null)
+            {
+                Debug.Log($"Created new wall segment at x={maxX + segmentSpacing}");
+            }
         }
+    }
+    
+    // Method to manually regenerate walls (can be called from Inspector button)
+    [ContextMenu("Regenerate Walls")]
+    public void RegenerateWalls()
+    {
+        // Clear existing generated walls (but keep manually placed ones)
+        for (int i = wallSegments.Count - 1; i >= 0; i--)
+        {
+            if (wallSegments[i] != null && wallSegments[i].name.Contains("WallSegment"))
+            {
+                DestroyImmediate(wallSegments[i]);
+            }
+        }
+        wallSegments.Clear();
+        
+        GenerateWalls();
     }
 }

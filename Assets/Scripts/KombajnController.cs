@@ -3,7 +3,7 @@ using UnityEngine;
 public class KombajnController : MonoBehaviour
 {
     [Header("Movement Settings")]
-    public float moveSpeed = 0.5f;
+    [SerializeField] public float moveSpeed = 0.3f;
     
     private SpriteRenderer spriteRenderer;
     
