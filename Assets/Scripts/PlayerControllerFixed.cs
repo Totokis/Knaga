@@ -15,16 +15,26 @@ public class PlayerControllerFixed : MonoBehaviour
     [Header("Ground Settings")]
     [SerializeField] public float groundY = -2f;
     
+    [Header("Animation Settings")]
+    [SerializeField] public string walkAnimationParameter = "IsWalking";
+    [SerializeField] public string speedAnimationParameter = "Speed";
+    [SerializeField] public float minSpeedForAnimation = 0.1f;
+    
     private float currentVelocity = 0f;
     private float targetVelocity = 0f;
     private float moveInput = 0f;
     private Rigidbody2D rb;
     private BoxCollider2D boxCollider;
+    private Animator animator;
+    private SpriteRenderer spriteRenderer;
+    private bool facingRight = true;
     
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
         boxCollider = GetComponent<BoxCollider2D>();
+        animator = GetComponent<Animator>();
+        spriteRenderer = GetComponent<SpriteRenderer>();
         
         if (rb != null)
         {
@@ -72,6 +82,22 @@ public class PlayerControllerFixed : MonoBehaviour
             targetVelocity = moveInput * moveSpeed;
             currentVelocity = Mathf.MoveTowards(currentVelocity, targetVelocity, acceleration * Time.deltaTime);
         }
+        
+        // Obracanie postaci w kierunku ruchu
+        if (spriteRenderer != null)
+        {
+            if (currentVelocity > 0 && !facingRight)
+            {
+                Flip();
+            }
+            else if (currentVelocity < 0 && facingRight)
+            {
+                Flip();
+            }
+        }
+        
+        // Aktualizacja animacji
+        UpdateAnimation();
     }
     
     void FixedUpdate()
@@ -93,6 +119,57 @@ public class PlayerControllerFixed : MonoBehaviour
             
             rb.MovePosition(newPosition);
         }
+    }
+    
+    void Flip()
+    {
+        facingRight = !facingRight;
+        
+        // Metoda 1: Flip przez SpriteRenderer (zalecana)
+        if (spriteRenderer != null)
+        {
+            spriteRenderer.flipX = !facingRight;
+        }
+        
+        // Alternatywa - Metoda 2: Flip przez skalę (zakomentowana)
+        // Vector3 scale = transform.localScale;
+        // scale.x *= -1;
+        // transform.localScale = scale;
+    }
+    
+    void UpdateAnimation()
+    {
+        if (animator == null) return;
+        
+        bool isMoving = Mathf.Abs(currentVelocity) > minSpeedForAnimation;
+        
+        // Jeśli animator ma parametr bool "IsWalking"
+        if (!string.IsNullOrEmpty(walkAnimationParameter))
+        {
+            if (HasParameter(walkAnimationParameter))
+            {
+                animator.SetBool(walkAnimationParameter, isMoving);
+            }
+        }
+        
+        // Jeśli animator ma parametr float "Speed" 
+        if (!string.IsNullOrEmpty(speedAnimationParameter))
+        {
+            if (HasParameter(speedAnimationParameter))
+            {
+                animator.SetFloat(speedAnimationParameter, Mathf.Abs(currentVelocity));
+            }
+        }
+    }
+    
+    bool HasParameter(string parameterName)
+    {
+        foreach (AnimatorControllerParameter param in animator.parameters)
+        {
+            if (param.name == parameterName)
+                return true;
+        }
+        return false;
     }
     
     void OnDrawGizmosSelected()
