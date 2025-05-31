@@ -1906,8 +1906,8 @@ MonoBehaviour:
   deceleration: 50
   leftBound: -4
   groundY: -6
-  walkAnimationParameter: IsWalking
-  speedAnimationParameter: Speed
+  idleAnimationClip: {fileID: 7400000, guid: 8a51010236b054a4da6e85bd7823011c, type: 2}
+  walkAnimationClip: {fileID: 7400000, guid: 90eaa656c5aad3d48a0701b802b4bef8, type: 2}
   minSpeedForAnimation: 0.1
 --- !u!95 &975568198
 Animator:
@@ -1919,7 +1919,7 @@ Animator:
   m_GameObject: {fileID: 975568190}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: a2d54745c0ded2942aa3c6ad69a92770, type: 2}
+  m_Controller: {fileID: 0}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
