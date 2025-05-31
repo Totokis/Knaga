@@ -1,11 +1,12 @@
 using System;
 using TMPro;
 using UnityEngine;
+using UnityEngine.Serialization;
 
 public class Location : MonoBehaviour
 {
     [SerializeField] private string locationName;
-    [SerializeField] private TMP_Text text;
+    [SerializeField] private GameObject sign;
     [SerializeField] private PulsingMarker marker;
 
     [SerializeField] private LineRenderer lineRenderer;
@@ -16,19 +17,19 @@ public class Location : MonoBehaviour
 
     private void Awake()
     {
-        _initialScaleX = text.transform.localScale.x;
-        _initialPositionX = text.transform.localPosition.x; // poprawka: używaj localPosition
-        text.text = locationName;
-        text.gameObject.SetActive(false);
+        _initialScaleX = sign.transform.localScale.x;
+        _initialPositionX = sign.transform.localPosition.x; // poprawka: używaj localPosition
+        
+        sign.gameObject.SetActive(false);
     }
 
     private void OnTriggerEnter2D(Collider2D other)
     {
         if (other.GetComponent<GórnikKontroller>() != null)
         {
-            text.gameObject.SetActive(true);
-            LeanTween.scaleX(text.gameObject,_initialScaleX, 0.5f).setFrom(0f).setEase(LeanTweenType.easeOutCubic);
-            LeanTween.moveLocalX(text.gameObject, _initialPositionX, 0.5f).setFrom(_initialPositionX-1f).setEase(LeanTweenType.easeOutCubic); // większa różnica, by efekt był widoczny, ale zawsze wokół _initialPositionX
+            sign.gameObject.SetActive(true);
+            LeanTween.scaleX(sign.gameObject,_initialScaleX, 0.5f).setFrom(0f).setEase(LeanTweenType.easeOutCubic);
+            LeanTween.moveLocalX(sign.gameObject, _initialPositionX, 0.5f).setFrom(_initialPositionX-1f).setEase(LeanTweenType.easeOutCubic); // większa różnica, by efekt był widoczny, ale zawsze wokół _initialPositionX
             marker.StopPulsing();
         }
     }
@@ -37,9 +38,9 @@ public class Location : MonoBehaviour
     {
         if (other.GetComponent<GórnikKontroller>() != null)
         {
-            LeanTween.scaleX(text.gameObject, 0f, 0.5f).setFrom(_initialScaleX).setEase(LeanTweenType.easeInCubic)
-                .setOnComplete(() => text.gameObject.SetActive(false));
-            LeanTween.moveLocalX(text.gameObject, _initialPositionX-1f, 0.5f)
+            LeanTween.scaleX(sign.gameObject, 0f, 0.5f).setFrom(_initialScaleX).setEase(LeanTweenType.easeInCubic)
+                .setOnComplete(() => sign.gameObject.SetActive(false));
+            LeanTween.moveLocalX(sign.gameObject, _initialPositionX-1f, 0.5f)
                 .setFrom(_initialPositionX).setEase(LeanTweenType.easeInCubic); // poprawka: zawsze wokół _initialPositionX
             marker.Pulse();
         }
