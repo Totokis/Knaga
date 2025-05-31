@@ -1084,8 +1084,6 @@ MonoBehaviour:
   wallSegmentPrefab: {fileID: 5460429056039791012, guid: 25df9f69ae9998447be0baaeb7e97fa7, type: 3}
   numberOfSegments: 20
   segmentSpacing: 1
-  startX: 25
-  wallY: 0
 --- !u!4 &968794697 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2547439464390918348, guid: 25df9f69ae9998447be0baaeb7e97fa7, type: 3}
@@ -1368,7 +1366,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2547439464390918348, guid: 25df9f69ae9998447be0baaeb7e97fa7, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 34.89
+      value: 38.8
       objectReference: {fileID: 0}
     - target: {fileID: 2547439464390918348, guid: 25df9f69ae9998447be0baaeb7e97fa7, type: 3}
       propertyPath: m_LocalPosition.y
@@ -1408,7 +1406,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5460429056039791012, guid: 25df9f69ae9998447be0baaeb7e97fa7, type: 3}
       propertyPath: m_Name
-      value: WallSegment
+      value: WallSegment1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

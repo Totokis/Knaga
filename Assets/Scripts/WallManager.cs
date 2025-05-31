@@ -1,5 +1,6 @@
 using UnityEngine;
 using System.Collections.Generic;
+using System.Linq;
 
 public class WallManager : MonoBehaviour
 {
@@ -9,8 +10,6 @@ public class WallManager : MonoBehaviour
     [Header("Wall Generation Settings")]
     [SerializeField] public int numberOfSegments = 20;
     [SerializeField] public float segmentSpacing = 1f;
-    [SerializeField] public float startX = 25f;
-    [SerializeField] public float wallY = 0f;
     
     private List<GameObject> wallSegments = new List<GameObject>();
     
@@ -22,12 +21,12 @@ public class WallManager : MonoBehaviour
             return;
         }
         
+        FindExistingWalls();
         GenerateWalls();
     }
     
-    void GenerateWalls()
+    void FindExistingWalls()
     {
-        // Clear any existing wall segments first
         foreach (Transform child in transform)
         {
             if (child.CompareTag("WallSegment"))
@@ -36,45 +35,42 @@ public class WallManager : MonoBehaviour
             }
         }
         
-        // Generate wall segments
-        int startIndex = wallSegments.Count;
-        for (int i = startIndex; i < numberOfSegments; i++)
-        {
-            float xPos = startX + (i * segmentSpacing);
-            CreateWallSegment(xPos, i + 1);
-        }
-        
-        Debug.Log($"Generated {numberOfSegments - startIndex} wall segments. Total: {wallSegments.Count}");
+        wallSegments = wallSegments.OrderBy(w => w.transform.position.x).ToList();
+        Debug.Log("Found " + wallSegments.Count + " existing wall segments");
     }
     
-    GameObject CreateWallSegment(float xPosition, int index)
+    void GenerateWalls()
     {
-        if (wallSegmentPrefab == null)
+        if (wallSegments.Count == 0)
         {
-            Debug.LogError("Cannot create wall segment - prefab is null!");
-            return null;
+            Debug.LogWarning("No existing wall segments found! Place at least one wall segment manually.");
+            return;
         }
         
-        // Instantiate the prefab
-        GameObject newSegment = Instantiate(wallSegmentPrefab, transform);
-        newSegment.name = $"WallSegment{index}";
-        newSegment.transform.position = new Vector3(xPosition, wallY, 0);
+        GameObject rightmostWall = wallSegments[wallSegments.Count - 1];
+        float startX = rightmostWall.transform.position.x;
+        float wallY = rightmostWall.transform.position.y;
         
-        // Ensure it has the correct tag
+        int segmentsToGenerate = numberOfSegments - wallSegments.Count;
+        
+        for (int i = 0; i < segmentsToGenerate; i++)
+        {
+            float xPos = startX + ((i + 1) * segmentSpacing);
+            CreateWallSegment(xPos, wallY, wallSegments.Count + i + 1);
+        }
+    }
+    
+    GameObject CreateWallSegment(float xPosition, float yPosition, int index)
+    {
+        if (wallSegmentPrefab == null) return null;
+        
+        GameObject newSegment = Instantiate(wallSegmentPrefab, transform);
+        newSegment.name = "WallSegment" + index;
+        newSegment.transform.position = new Vector3(xPosition, yPosition, 0);
+        
         if (!newSegment.CompareTag("WallSegment"))
         {
             newSegment.tag = "WallSegment";
-        }
-        
-        // Ensure it has required components
-        if (newSegment.GetComponent<BoxCollider2D>() == null)
-        {
-            Debug.LogWarning($"Wall segment {newSegment.name} is missing BoxCollider2D!");
-        }
-        
-        if (newSegment.GetComponent<SpriteRenderer>() == null)
-        {
-            Debug.LogWarning($"Wall segment {newSegment.name} is missing SpriteRenderer!");
         }
         
         wallSegments.Add(newSegment);
@@ -83,45 +79,15 @@ public class WallManager : MonoBehaviour
     
     public void OnWallDestroyed(GameObject destroyedWall)
     {
-        // Remove from list
         wallSegments.Remove(destroyedWall);
         
-        // Generate new segment at the end
-        if (wallSegments.Count > 0 && wallSegments.Count < numberOfSegments)
+        if (wallSegments.Count > 0)
         {
-            // Find the rightmost segment
-            float maxX = -float.MaxValue;
-            foreach (GameObject segment in wallSegments)
-            {
-                if (segment != null && segment.transform.position.x > maxX)
-                {
-                    maxX = segment.transform.position.x;
-                }
-            }
+            GameObject rightmostWall = wallSegments.OrderBy(w => w.transform.position.x).Last();
+            float maxX = rightmostWall.transform.position.x;
+            float wallY = rightmostWall.transform.position.y;
             
-            // Create new segment
-            GameObject newSegment = CreateWallSegment(maxX + segmentSpacing, wallSegments.Count + 100);
-            if (newSegment != null)
-            {
-                Debug.Log($"Created new wall segment at x={maxX + segmentSpacing}");
-            }
+            CreateWallSegment(maxX + segmentSpacing, wallY, wallSegments.Count + 100);
         }
-    }
-    
-    // Method to manually regenerate walls (can be called from Inspector button)
-    [ContextMenu("Regenerate Walls")]
-    public void RegenerateWalls()
-    {
-        // Clear existing generated walls (but keep manually placed ones)
-        for (int i = wallSegments.Count - 1; i >= 0; i--)
-        {
-            if (wallSegments[i] != null && wallSegments[i].name.Contains("WallSegment"))
-            {
-                DestroyImmediate(wallSegments[i]);
-            }
-        }
-        wallSegments.Clear();
-        
-        GenerateWalls();
     }
 }
