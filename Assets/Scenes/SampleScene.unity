@@ -1089,7 +1089,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   wallSegmentPrefab: {fileID: 5460429056039791012, guid: 25df9f69ae9998447be0baaeb7e97fa7, type: 3}
   numberOfSegments: 20
-  segmentSpacing: 1
+  segmentSpacing: 2.7
 --- !u!4 &968794697 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2547439464390918348, guid: 25df9f69ae9998447be0baaeb7e97fa7, type: 3}
@@ -1132,6 +1132,7 @@ MonoBehaviour:
   deceleration: 10
   leftBound: -4
   rightBound: 40
+  collisionCheckDistance: 0.1
 --- !u!61 &975568192
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1176,7 +1177,7 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 0.0001, y: 0.0001}
+  m_Size: {x: 5.65, y: 5.65}
   m_EdgeRadius: 0
 --- !u!50 &975568193
 Rigidbody2D:
@@ -1372,11 +1373,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2547439464390918348, guid: 25df9f69ae9998447be0baaeb7e97fa7, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 33.95
+      value: 33.6666
       objectReference: {fileID: 0}
     - target: {fileID: 2547439464390918348, guid: 25df9f69ae9998447be0baaeb7e97fa7, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: 1.3418
       objectReference: {fileID: 0}
     - target: {fileID: 2547439464390918348, guid: 25df9f69ae9998447be0baaeb7e97fa7, type: 3}
       propertyPath: m_LocalPosition.z

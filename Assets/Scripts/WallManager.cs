@@ -32,6 +32,12 @@ public class WallManager : MonoBehaviour
             if (child.CompareTag("WallSegment"))
             {
                 wallSegments.Add(child.gameObject);
+                // Upewnij się że ściana ma collider który nie jest triggerem
+                BoxCollider2D col = child.GetComponent<BoxCollider2D>();
+                if (col != null && col.isTrigger)
+                {
+                    col.isTrigger = false;
+                }
             }
         }
         
@@ -71,6 +77,13 @@ public class WallManager : MonoBehaviour
         if (!newSegment.CompareTag("WallSegment"))
         {
             newSegment.tag = "WallSegment";
+        }
+        
+        // Upewnij się że collider nie jest triggerem
+        BoxCollider2D col = newSegment.GetComponent<BoxCollider2D>();
+        if (col != null)
+        {
+            col.isTrigger = false;
         }
         
         wallSegments.Add(newSegment);
