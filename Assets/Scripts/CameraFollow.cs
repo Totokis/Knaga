@@ -10,9 +10,23 @@ public class CameraFollow : MonoBehaviour
     {
         if (target == null)
         {
-            GameObject player = GameObject.Find("Player");
-            if (player != null)
-                target = player.transform;
+            // First try to find KombajnMain
+            GameObject kombajn = GameObject.Find("KombajnMain");
+            if (kombajn != null)
+            {
+                target = kombajn.transform;
+                Debug.Log("Camera following KombajnMain");
+            }
+            else
+            {
+                // Fallback to player
+                GameObject player = GameObject.Find("Player");
+                if (player != null)
+                {
+                    target = player.transform;
+                    Debug.Log("Camera following Player");
+                }
+            }
         }
     }
     

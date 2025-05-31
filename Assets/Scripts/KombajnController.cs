@@ -3,58 +3,74 @@ using UnityEngine;
 public class KombajnController : MonoBehaviour
 {
     [Header("Movement Settings")]
-    [SerializeField] public float moveSpeed = 0.3f;
-    [SerializeField] public float stopAcceleration = 2f;
-    [SerializeField] public float startAcceleration = 1f;
+    public float moveSpeed = 5f;
+    public float stopDistance = 0.1f;
+    public bool autoMove = true;
     
-    private float currentSpeed;
-    private bool canMove = true;
-    private SpriteRenderer spriteRenderer;
+    private Rigidbody2D rb;
+    private bool isMoving = false;
+    private bool shouldMove = false;
+    private float stopTimer = 0f;
+    private const float STOP_DELAY = 0.5f;
     
     void Start()
     {
-        spriteRenderer = GetComponent<SpriteRenderer>();
-        currentSpeed = moveSpeed;
-    }
-    
-    void Update()
-    {
-        // Płynne zatrzymywanie i ruszanie
-        if (canMove)
+        rb = GetComponent<Rigidbody2D>();
+        if (rb != null)
         {
-            currentSpeed = Mathf.MoveTowards(currentSpeed, moveSpeed, startAcceleration * Time.deltaTime);
-        }
-        else
-        {
-            currentSpeed = Mathf.MoveTowards(currentSpeed, 0f, stopAcceleration * Time.deltaTime);
+            rb.gravityScale = 0f;
+            rb.constraints = RigidbodyConstraints2D.FreezeRotation;
         }
         
-        // Ruch w prawo z aktualną prędkością
-        if (currentSpeed > 0)
+        if (autoMove)
         {
-            transform.position += Vector3.right * currentSpeed * Time.deltaTime;
+            StartMoving();
+        }
+    }
+    
+    void FixedUpdate()
+    {
+        if (shouldMove && !isMoving)
+        {
+            stopTimer += Time.fixedDeltaTime;
+            if (stopTimer >= STOP_DELAY)
+            {
+                isMoving = true;
+                stopTimer = 0f;
+            }
+        }
+        
+        if (isMoving && rb != null)
+        {
+            rb.linearVelocity = new Vector2(moveSpeed, rb.linearVelocity.y);
+        }
+        else if (rb != null)
+        {
+            rb.linearVelocity = new Vector2(0, rb.linearVelocity.y);
         }
     }
     
     public void StopMoving()
     {
-        canMove = false;
-        Debug.Log("Kombajn: Zatrzymuję się do kruszenia");
+        Debug.Log("Kombajn: Stopping movement");
+        isMoving = false;
+        shouldMove = false;
+        stopTimer = 0f;
     }
     
     public void StartMoving()
     {
-        canMove = true;
-        Debug.Log("Kombajn: Ruszam dalej");
-    }
-    
-    public bool IsMoving()
-    {
-        return currentSpeed > 0.01f;
+        Debug.Log("Kombajn: Starting movement (with delay)");
+        shouldMove = true;
     }
     
     public bool IsStopped()
     {
-        return currentSpeed < 0.01f;
+        return !isMoving && rb != null && Mathf.Abs(rb.linearVelocity.x) < stopDistance;
+    }
+    
+    public bool IsMoving()
+    {
+        return isMoving;
     }
 }
