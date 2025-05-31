@@ -14,6 +14,9 @@ public class MiningTriggerNew : MonoBehaviour
     private KombajnController kombajnController;
     private List<GameObject> wallsInTrigger = new List<GameObject>();
     
+    // Public getter for mining state
+    public bool IsMining() { return isMining; }
+    
     void Start()
     {
         kombajnController = GetComponentInParent<KombajnController>();
