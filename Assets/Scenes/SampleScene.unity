@@ -1341,7 +1341,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a7ea2030e6440624fa0e680a4c696c22, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 0.6
+  moveSpeed: 0.69
   stopDistance: 0.1
   autoMove: 1
 --- !u!4 &566879307
@@ -1629,7 +1629,7 @@ Transform:
   m_GameObject: {fileID: 892174261}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: -3.63, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -2836,8 +2836,8 @@ MonoBehaviour:
   backgroundSegmentPrefab: {fileID: 494934566399239865, guid: 9f9cf93e6d3e0f24784dbb75388cb0a5, type: 3}
   ceilingSegmentPrefab: {fileID: 5851734090068483234, guid: b4be72f512094e842b5951ab9b4aa847, type: 3}
   initialSegments: 30
-  startX: -10
-  floorSegmentWidth: 10
+  startX: -30
+  floorSegmentWidth: 49.6
   backgroundSegmentWidth: 17.32
   ceilingSegmentWidth: 20
   floorY: -7.7
