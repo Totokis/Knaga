@@ -524,7 +524,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a7ea2030e6440624fa0e680a4c696c22, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 0.55
+  moveSpeed: 0.77
   stopAcceleration: 2
   startAcceleration: 1
 --- !u!61 &338784867
@@ -1372,7 +1372,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2547439464390918348, guid: 25df9f69ae9998447be0baaeb7e97fa7, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 38.8
+      value: 33.95
       objectReference: {fileID: 0}
     - target: {fileID: 2547439464390918348, guid: 25df9f69ae9998447be0baaeb7e97fa7, type: 3}
       propertyPath: m_LocalPosition.y
@@ -1413,14 +1413,6 @@ PrefabInstance:
     - target: {fileID: 5460429056039791012, guid: 25df9f69ae9998447be0baaeb7e97fa7, type: 3}
       propertyPath: m_Name
       value: WallSegment1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6783627786645336559, guid: 25df9f69ae9998447be0baaeb7e97fa7, type: 3}
-      propertyPath: m_Size.x
-      value: 15.036938
-      objectReference: {fileID: 0}
-    - target: {fileID: 6783627786645336559, guid: 25df9f69ae9998447be0baaeb7e97fa7, type: 3}
-      propertyPath: m_Offset.x
-      value: 4.2137737
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
