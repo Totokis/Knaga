@@ -1,0 +1,819 @@
+fileFormatVersion: 2
+guid: 14cb0d3cb8fee0745b98bd8abf3cfd64
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 2002068547687602800
+    second: napis wujek_0
+  - first:
+      213: 5681878523368020952
+    second: napis wujek_1
+  - first:
+      213: -3274587664450606481
+    second: napis wujek_2
+  - first:
+      213: 4555769340747725144
+    second: napis wujek_3
+  - first:
+      213: 7187195775552884794
+    second: napis wujek_4
+  - first:
+      213: -4100361817915652270
+    second: napis wujek_5
+  - first:
+      213: 6943206913796719861
+    second: napis wujek_6
+  - first:
+      213: -1426276353412399191
+    second: napis wujek_7
+  - first:
+      213: 3116926658435777026
+    second: napis wujek_8
+  - first:
+      213: 8375456862705459905
+    second: napis wujek_9
+  - first:
+      213: -8648307455681676995
+    second: napis wujek_10
+  - first:
+      213: -3389540071494635203
+    second: napis wujek_11
+  - first:
+      213: -6482849576422254303
+    second: napis wujek_12
+  - first:
+      213: -7076051596637808148
+    second: napis wujek_13
+  - first:
+      213: -3349425949163161451
+    second: napis wujek_14
+  - first:
+      213: -296240785743064004
+    second: napis wujek_15
+  - first:
+      213: -1510018011170289678
+    second: napis wujek_16
+  - first:
+      213: -4741679848985420623
+    second: napis wujek_17
+  - first:
+      213: 6596586837054984621
+    second: napis wujek_18
+  - first:
+      213: -7020387256994653685
+    second: napis wujek_19
+  - first:
+      213: 6060831872019551521
+    second: napis wujek_20
+  - first:
+      213: 1022715825708031494
+    second: napis wujek_21
+  - first:
+      213: 215674397675934134
+    second: napis wujek_22
+  - first:
+      213: -8898535919242127404
+    second: napis wujek_23
+  - first:
+      213: 7477734682662308903
+    second: napis wujek_24
+  - first:
+      213: 6896136241123419603
+    second: napis wujek_25
+  - first:
+      213: 6883448195662440249
+    second: napis wujek_26
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: napis wujek_0
+      rect:
+        serializedVersion: 2
+        x: 246
+        y: 1435
+        width: 13
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 07ad6e89cb6c8cb10800000000000000
+      internalID: 2002068547687602800
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: napis wujek_1
+      rect:
+        serializedVersion: 2
+        x: 297
+        y: 1432
+        width: 15
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8db9542c9661ade40800000000000000
+      internalID: 5681878523368020952
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: napis wujek_2
+      rect:
+        serializedVersion: 2
+        x: 379
+        y: 1447
+        width: 11
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f6aab826ed35e82d0800000000000000
+      internalID: -3274587664450606481
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: napis wujek_3
+      rect:
+        serializedVersion: 2
+        x: 837
+        y: 1425
+        width: 51
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 85932e1f318593f30800000000000000
+      internalID: 4555769340747725144
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: napis wujek_4
+      rect:
+        serializedVersion: 2
+        x: 1020
+        y: 1185
+        width: 218
+        height: 433
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a30940d7a7c0eb360800000000000000
+      internalID: 7187195775552884794
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: napis wujek_5
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 1426
+        width: 7
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2570098b6a69817c0800000000000000
+      internalID: -4100361817915652270
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: napis wujek_6
+      rect:
+        serializedVersion: 2
+        x: 315
+        y: 1422
+        width: 7
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5f4c3e2c6e93b5060800000000000000
+      internalID: 6943206913796719861
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: napis wujek_7
+      rect:
+        serializedVersion: 2
+        x: 412
+        y: 1429
+        width: 11
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9af705b9639d43ce0800000000000000
+      internalID: -1426276353412399191
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: napis wujek_8
+      rect:
+        serializedVersion: 2
+        x: 853
+        y: 1191
+        width: 179
+        height: 246
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 202820b184c814b20800000000000000
+      internalID: 3116926658435777026
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: napis wujek_9
+      rect:
+        serializedVersion: 2
+        x: 281
+        y: 1407
+        width: 7
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1c2aa2d34a99b3470800000000000000
+      internalID: 8375456862705459905
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: napis wujek_10
+      rect:
+        serializedVersion: 2
+        x: 52
+        y: 862
+        width: 444
+        height: 537
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d393bb3903a0bf780800000000000000
+      internalID: -8648307455681676995
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: napis wujek_11
+      rect:
+        serializedVersion: 2
+        x: 522
+        y: 960
+        width: 347
+        height: 442
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d313c96734fe5f0d0800000000000000
+      internalID: -3389540071494635203
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: napis wujek_12
+      rect:
+        serializedVersion: 2
+        x: 1213
+        y: 1182
+        width: 7
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1295f0968aa4806a0800000000000000
+      internalID: -6482849576422254303
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: napis wujek_13
+      rect:
+        serializedVersion: 2
+        x: 1039
+        y: 1163
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ce9511a3090dccd90800000000000000
+      internalID: -7076051596637808148
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: napis wujek_14
+      rect:
+        serializedVersion: 2
+        x: 43
+        y: 1080
+        width: 11
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 59877a268d27481d0800000000000000
+      internalID: -3349425949163161451
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: napis wujek_15
+      rect:
+        serializedVersion: 2
+        x: 39
+        y: 1036
+        width: 9
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c345dcd239a83ebf0800000000000000
+      internalID: -296240785743064004
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: napis wujek_16
+      rect:
+        serializedVersion: 2
+        x: 28
+        y: 990
+        width: 7
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2f7c0c78e965b0be0800000000000000
+      internalID: -1510018011170289678
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: napis wujek_17
+      rect:
+        serializedVersion: 2
+        x: 5
+        y: 975
+        width: 7
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1bc9892cc4b223eb0800000000000000
+      internalID: -4741679848985420623
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: napis wujek_18
+      rect:
+        serializedVersion: 2
+        x: 13
+        y: 968
+        width: 10
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: da11ea037c8cb8b50800000000000000
+      internalID: 6596586837054984621
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: napis wujek_19
+      rect:
+        serializedVersion: 2
+        x: 40
+        y: 969
+        width: 16
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b0a97214cf2929e90800000000000000
+      internalID: -7020387256994653685
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: napis wujek_20
+      rect:
+        serializedVersion: 2
+        x: 27
+        y: 945
+        width: 21
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1255717d9766c1450800000000000000
+      internalID: 6060831872019551521
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: napis wujek_21
+      rect:
+        serializedVersion: 2
+        x: 29
+        y: 943
+        width: 6
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 60e5f79ff9a613e00800000000000000
+      internalID: 1022715825708031494
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: napis wujek_22
+      rect:
+        serializedVersion: 2
+        x: 9
+        y: 898
+        width: 8
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6b1de94d8ba3ef200800000000000000
+      internalID: 215674397675934134
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: napis wujek_23
+      rect:
+        serializedVersion: 2
+        x: 21
+        y: 881
+        width: 9
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4d7d4885abc028480800000000000000
+      internalID: -8898535919242127404
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: napis wujek_24
+      rect:
+        serializedVersion: 2
+        x: 35
+        y: 881
+        width: 10
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 72c84bc331046c760800000000000000
+      internalID: 7477734682662308903
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: napis wujek_25
+      rect:
+        serializedVersion: 2
+        x: 9
+        y: 859
+        width: 12
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3d5ebdebf5ff3bf50800000000000000
+      internalID: 6896136241123419603
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: napis wujek_26
+      rect:
+        serializedVersion: 2
+        x: 109
+        y: 858
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9376344f9abe68f50800000000000000
+      internalID: 6883448195662440249
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      napis wujek_0: 2002068547687602800
+      napis wujek_1: 5681878523368020952
+      napis wujek_10: -8648307455681676995
+      napis wujek_11: -3389540071494635203
+      napis wujek_12: -6482849576422254303
+      napis wujek_13: -7076051596637808148
+      napis wujek_14: -3349425949163161451
+      napis wujek_15: -296240785743064004
+      napis wujek_16: -1510018011170289678
+      napis wujek_17: -4741679848985420623
+      napis wujek_18: 6596586837054984621
+      napis wujek_19: -7020387256994653685
+      napis wujek_2: -3274587664450606481
+      napis wujek_20: 6060831872019551521
+      napis wujek_21: 1022715825708031494
+      napis wujek_22: 215674397675934134
+      napis wujek_23: -8898535919242127404
+      napis wujek_24: 7477734682662308903
+      napis wujek_25: 6896136241123419603
+      napis wujek_26: 6883448195662440249
+      napis wujek_3: 4555769340747725144
+      napis wujek_4: 7187195775552884794
+      napis wujek_5: -4100361817915652270
+      napis wujek_6: 6943206913796719861
+      napis wujek_7: -1426276353412399191
+      napis wujek_8: 3116926658435777026
+      napis wujek_9: 8375456862705459905
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
