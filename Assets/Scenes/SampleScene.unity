@@ -3100,8 +3100,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   floorSegmentPrefab: {fileID: 5618975466953897395, guid: eb59530738a1d0d4f923ad6958228f24, type: 3}
-  backgroundSegmentPrefab: {fileID: 494934566399239865, guid: 9f9cf93e6d3e0f24784dbb75388cb0a5, type: 3}
-  ceilingSegmentPrefab: {fileID: 5851734090068483234, guid: b4be72f512094e842b5951ab9b4aa847, type: 3}
+  backgroundSegmentPrefab: {fileID: 0}
+  ceilingSegmentPrefab: {fileID: 0}
   segmentsToGenerate: 30
   segmentWidth: 10
   startX: -10
