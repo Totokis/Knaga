@@ -3109,7 +3109,7 @@ GameObject:
   m_Layer: 0
   m_Name: Environment
   m_TagString: Untagged
-  m_Icon: {fileID: 0}
+  m_Icon: {fileID: -964228994112308473, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -3146,12 +3146,12 @@ MonoBehaviour:
   initialSegments: 30
   startX: -10
   floorSegmentWidth: 10
-  backgroundSegmentWidth: 10
-  ceilingSegmentWidth: 10
+  backgroundSegmentWidth: 17.32
+  ceilingSegmentWidth: 20
   floorY: -7.7
-  backgroundY: 0.07
+  backgroundY: 3.68
   backgroundZ: 2
-  ceilingY: 3
+  ceilingY: 9.24
   enableDynamicGeneration: 1
   generateAheadDistance: 50
   removeBackDistance: 100
