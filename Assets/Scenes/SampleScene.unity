@@ -3079,7 +3079,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1950002192}
-  - component: {fileID: 1950002191}
+  - component: {fileID: 1950002193}
   m_Layer: 0
   m_Name: Environment
   m_TagString: Untagged
@@ -3087,31 +3087,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1950002191
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1950002190}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 25ce803f1abf534419ea145f8cfc1fdc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  floorSegmentPrefab: {fileID: 5618975466953897395, guid: eb59530738a1d0d4f923ad6958228f24, type: 3}
-  backgroundSegmentPrefab: {fileID: 0}
-  ceilingSegmentPrefab: {fileID: 0}
-  segmentsToGenerate: 30
-  segmentWidth: 10
-  startX: -10
-  floorY: -3
-  backgroundY: 0
-  backgroundZ: 2
-  ceilingY: 3
-  enableDynamicGeneration: 1
-  generateAheadDistance: 20
-  removeBackDistance: 30
 --- !u!4 &1950002192
 Transform:
   m_ObjectHideFlags: 0
@@ -3127,6 +3102,34 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1950002193
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1950002190}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 34af5f3f0c582424cadd58c810cc8786, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  floorSegmentPrefab: {fileID: 5618975466953897395, guid: eb59530738a1d0d4f923ad6958228f24, type: 3}
+  backgroundSegmentPrefab: {fileID: 0}
+  ceilingSegmentPrefab: {fileID: 0}
+  initialSegments: 30
+  startX: -10
+  floorSegmentWidth: 10
+  backgroundSegmentWidth: 10
+  ceilingSegmentWidth: 10
+  floorY: -3
+  backgroundY: 0
+  backgroundZ: 2
+  ceilingY: 3
+  enableDynamicGeneration: 1
+  generateAheadDistance: 50
+  removeBackDistance: 100
+  maxSegmentsPerFrame: 3
 --- !u!1 &1955175349
 GameObject:
   m_ObjectHideFlags: 0
