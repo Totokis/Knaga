@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
+using System.Collections.Generic;
 
 public class PlayerControllerFixed : MonoBehaviour
 {
@@ -7,35 +8,40 @@ public class PlayerControllerFixed : MonoBehaviour
     [SerializeField] public float moveSpeed = 7f;
     [SerializeField] public float acceleration = 50f;
     [SerializeField] public float deceleration = 50f;
-    
+
     [Header("Movement Bounds")]
     [SerializeField] public float leftBound = -4f;
-    // Removed rightBound - let colliders handle the right side
-    
+
     [Header("Ground Settings")]
     [SerializeField] public float groundY = -2f;
-    
+
     [Header("Animation Settings")]
-    [SerializeField] public string walkAnimationParameter = "IsWalking";
-    [SerializeField] public string speedAnimationParameter = "Speed";
+    [SerializeField] public AnimationClip idleAnimationClip;
+    [SerializeField] public AnimationClip walkAnimationClip;
     [SerializeField] public float minSpeedForAnimation = 0.1f;
-    
+
+    public float CurrentVelocity { get { return currentVelocity; } }
+    public float MoveInput { get { return moveInput; } }
+    public bool IsMoving { get { return moveInput != 0 && Mathf.Abs(currentVelocity) > minSpeedForAnimation; } }
+
     private float currentVelocity = 0f;
     private float targetVelocity = 0f;
     private float moveInput = 0f;
     private Rigidbody2D rb;
     private BoxCollider2D boxCollider;
     private Animator animator;
+    private AnimatorOverrideController overrideController;
     private SpriteRenderer spriteRenderer;
     private bool facingRight = true;
-    
+    private bool wasMoving = false;
+
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
         boxCollider = GetComponent<BoxCollider2D>();
         animator = GetComponent<Animator>();
         spriteRenderer = GetComponent<SpriteRenderer>();
-        
+
         if (rb != null)
         {
             rb.constraints = RigidbodyConstraints2D.FreezeRotation | RigidbodyConstraints2D.FreezePositionY;
@@ -43,21 +49,27 @@ public class PlayerControllerFixed : MonoBehaviour
             rb.collisionDetectionMode = CollisionDetectionMode2D.Continuous;
             rb.interpolation = RigidbodyInterpolation2D.Interpolate;
         }
-        
+
         if (boxCollider != null)
         {
             boxCollider.isTrigger = false;
         }
-        
+
         Vector3 pos = transform.position;
         pos.y = groundY;
         transform.position = pos;
+
+        if (animator != null && animator.runtimeAnimatorController != null)
+        {
+            overrideController = new AnimatorOverrideController(animator.runtimeAnimatorController);
+            animator.runtimeAnimatorController = overrideController;
+        }
     }
-    
+
     void Update()
     {
         moveInput = 0f;
-        
+
         if (Keyboard.current != null)
         {
             if (Keyboard.current.aKey.isPressed || Keyboard.current.leftArrowKey.isPressed)
@@ -65,14 +77,14 @@ public class PlayerControllerFixed : MonoBehaviour
             else if (Keyboard.current.dKey.isPressed || Keyboard.current.rightArrowKey.isPressed)
                 moveInput = 1f;
         }
-        
+
         if (Gamepad.current != null)
         {
             float gamepadInput = Gamepad.current.leftStick.x.ReadValue();
             if (Mathf.Abs(gamepadInput) > 0.1f)
                 moveInput = gamepadInput;
         }
-        
+
         if (moveInput == 0f)
         {
             currentVelocity = Mathf.MoveTowards(currentVelocity, 0f, deceleration * Time.deltaTime);
@@ -82,8 +94,7 @@ public class PlayerControllerFixed : MonoBehaviour
             targetVelocity = moveInput * moveSpeed;
             currentVelocity = Mathf.MoveTowards(currentVelocity, targetVelocity, acceleration * Time.deltaTime);
         }
-        
-        // Obracanie postaci w kierunku ruchu
+
         if (spriteRenderer != null)
         {
             if (currentVelocity > 0 && !facingRight)
@@ -95,88 +106,59 @@ public class PlayerControllerFixed : MonoBehaviour
                 Flip();
             }
         }
-        
-        // Aktualizacja animacji
+
         UpdateAnimation();
     }
-    
+
     void FixedUpdate()
     {
         if (rb != null)
         {
             Vector2 movement = Vector2.right * currentVelocity * Time.fixedDeltaTime;
             Vector2 newPosition = rb.position + movement;
-            
-            // Keep Y position locked
+
             newPosition.y = groundY;
-            
-            // Only apply left bound
+
             if (newPosition.x < leftBound)
             {
                 newPosition.x = leftBound;
                 currentVelocity = 0f;
             }
-            
+
             rb.MovePosition(newPosition);
         }
     }
-    
+
     void Flip()
     {
         facingRight = !facingRight;
-        
-        // Metoda 1: Flip przez SpriteRenderer (zalecana)
+
         if (spriteRenderer != null)
         {
             spriteRenderer.flipX = !facingRight;
         }
-        
-        // Alternatywa - Metoda 2: Flip przez skalę (zakomentowana)
-        // Vector3 scale = transform.localScale;
-        // scale.x *= -1;
-        // transform.localScale = scale;
     }
-    
+
     void UpdateAnimation()
     {
-        if (animator == null) return;
-        
-        bool isMoving = Mathf.Abs(currentVelocity) > minSpeedForAnimation;
-        
-        // Jeśli animator ma parametr bool "IsWalking"
-        if (!string.IsNullOrEmpty(walkAnimationParameter))
+        if (animator == null || overrideController == null) return;
+
+        bool isMoving = IsMoving;
+
+        if (isMoving != wasMoving)
         {
-            if (HasParameter(walkAnimationParameter))
-            {
-                animator.SetBool(walkAnimationParameter, isMoving);
-            }
-        }
-        
-        // Jeśli animator ma parametr float "Speed" 
-        if (!string.IsNullOrEmpty(speedAnimationParameter))
-        {
-            if (HasParameter(speedAnimationParameter))
-            {
-                animator.SetFloat(speedAnimationParameter, Mathf.Abs(currentVelocity));
-            }
+            wasMoving = isMoving;
+
+            animator.SetBool("IsWalking", isMoving);
         }
     }
-    
-    bool HasParameter(string parameterName)
-    {
-        foreach (AnimatorControllerParameter param in animator.parameters)
-        {
-            if (param.name == parameterName)
-                return true;
-        }
-        return false;
-    }
-    
+
+
     void OnDrawGizmosSelected()
     {
         Gizmos.color = Color.red;
         Gizmos.DrawLine(new Vector3(leftBound, -5, 0), new Vector3(leftBound, 5, 0));
-        
+
         Gizmos.color = Color.green;
         Gizmos.DrawLine(new Vector3(-10, groundY, 0), new Vector3(50, groundY, 0));
     }

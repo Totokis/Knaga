@@ -132,7 +132,7 @@ public class WallManager : MonoBehaviour
         }
         
         // Position on ground
-        droppedItem.transform.position = new Vector3(position.x, -2.5f, 0);
+        droppedItem.transform.position = new Vector3(position.x, -5.5f, 0);
         
         // Add ItemPickup component
         ItemPickup pickup = droppedItem.GetComponent<ItemPickup>();
