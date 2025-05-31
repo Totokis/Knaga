@@ -1,6 +1,7 @@
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.InputSystem;
+using System.Collections;
 
 public class ItemPickup : MonoBehaviour
 {
@@ -9,17 +10,23 @@ public class ItemPickup : MonoBehaviour
     
     [Header("Pickup Settings")]
     public float pickupRange = 2f;
+    public float pickupAnimationDuration = 0.5f;
     
     private Transform player;
     private bool isInRange = false;
+    private bool isPickingUp = false;
     private SpriteRenderer spriteRenderer;
     private PlayerMessageDisplay messageDisplay;
+    private PlayerAnimatorHelper animatorHelper;
     
     void Start()
     {
         GameObject playerObj = GameObject.Find("Player");
         if (playerObj != null)
+        {
             player = playerObj.transform;
+            animatorHelper = playerObj.GetComponent<PlayerAnimatorHelper>();
+        }
         
         // Znajdź system komunikatów
         messageDisplay = PlayerMessageDisplay.Instance;
@@ -65,7 +72,7 @@ public class ItemPickup : MonoBehaviour
     
     void Update()
     {
-        if (player == null) return;
+        if (player == null || isPickingUp) return;
         
         float distance = Vector2.Distance(transform.position, player.position);
         bool wasInRange = isInRange;
@@ -81,8 +88,33 @@ public class ItemPickup : MonoBehaviour
         
         if (isInRange && Keyboard.current != null && Keyboard.current.eKey.wasPressedThisFrame)
         {
-            TryPickup();
+            StartCoroutine(PickupWithAnimation());
         }
+    }
+    
+    IEnumerator PickupWithAnimation()
+    {
+        isPickingUp = true;
+        
+        // Rozpocznij animację podnoszenia
+        if (animatorHelper != null)
+        {
+            animatorHelper.SetTakingAnimation(true);
+        }
+        
+        // Poczekaj na animację
+        yield return new WaitForSeconds(pickupAnimationDuration);
+        
+        // Wykonaj właściwe podniesienie
+        TryPickup();
+        
+        // Zakończ animację podnoszenia
+        if (animatorHelper != null)
+        {
+            animatorHelper.SetTakingAnimation(false);
+        }
+        
+        isPickingUp = false;
     }
     
     void TryPickup()
