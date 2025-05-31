@@ -13,12 +13,16 @@ public class ItemPickup : MonoBehaviour
     private Transform player;
     private bool isInRange = false;
     private SpriteRenderer spriteRenderer;
+    private PlayerMessageDisplay messageDisplay;
     
     void Start()
     {
         GameObject playerObj = GameObject.Find("Player");
         if (playerObj != null)
             player = playerObj.transform;
+        
+        // Znajdź system komunikatów
+        messageDisplay = PlayerMessageDisplay.Instance;
         
         spriteRenderer = GetComponent<SpriteRenderer>();
         if (spriteRenderer == null)
@@ -69,8 +73,10 @@ public class ItemPickup : MonoBehaviour
         
         if (isInRange != wasInRange)
         {
-            if (isInRange)
-                Debug.Log($"Press E to pick up {itemData.itemName}");
+            if (isInRange && messageDisplay != null)
+            {
+                messageDisplay.ShowPickupPrompt(itemData.itemName);
+            }
         }
         
         if (isInRange && Keyboard.current != null && Keyboard.current.eKey.wasPressedThisFrame)
@@ -86,12 +92,26 @@ public class ItemPickup : MonoBehaviour
         {
             if (inventory.AddItem(itemData))
             {
-                Debug.Log($"Picked up {itemData.amount} {itemData.itemName}");
+                if (messageDisplay != null)
+                {
+                    messageDisplay.ShowItemPickedUp(itemData.itemName, itemData.amount);
+                }
+                else
+                {
+                    Debug.Log($"Picked up {itemData.amount} {itemData.itemName}");
+                }
                 Destroy(gameObject);
             }
             else
             {
-                Debug.Log("Inventory full or incompatible item!");
+                if (messageDisplay != null)
+                {
+                    messageDisplay.ShowInventoryFull();
+                }
+                else
+                {
+                    Debug.Log("Inventory full or incompatible item!");
+                }
             }
         }
     }
