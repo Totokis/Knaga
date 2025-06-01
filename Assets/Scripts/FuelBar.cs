@@ -31,8 +31,8 @@ public class FuelBar : MonoBehaviour
         }
         
         // Store initial values
-        initialScaleX = transform.localScale.x;
-        initialPosition = transform.position;
+        initialScaleX = fuelBarSprite.transform.localScale.x;
+        initialPosition = fuelBarSprite.transform.position;
         
         // Calculate initial width (sprite width * scale)
         if (fuelBarSprite.sprite != null)
