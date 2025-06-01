@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 64c4f7f4e562631439ecfeff0981a5f8
+guid: 8c56b353d6c425e418752999e6c72431
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 7866021410304864948
-    second: slask_0
+      213: -289867261276538854
+    second: podpora_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -100,13 +100,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: slask_0
+      name: podpora_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 431
-        height: 431
+        x: 806
+        y: 321
+        width: 1328
+        height: 3868
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -115,8 +115,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 4b2b6d4fbc8b92d60800000000000000
-      internalID: 7866021410304864948
+      spriteID: a18b89bf24f2afbf0800000000000000
+      internalID: -289867261276538854
       vertices: []
       indices: 
       edges: []
@@ -135,7 +135,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      slask_0: 7866021410304864948
+      podpora_0: -289867261276538854
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
