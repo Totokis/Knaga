@@ -8,6 +8,7 @@ public class FuelBar : MonoBehaviour
     
     [Header("Visual")]
     [SerializeField] private SpriteRenderer fuelBarSprite; // The sprite renderer for the fuel bar
+    [SerializeField] private GameObject barHandle; 
     [SerializeField] private Color fullColor = Color.green;
     [SerializeField] private Color emptyColor = Color.red;
     
@@ -73,18 +74,18 @@ public class FuelBar : MonoBehaviour
     
     void UpdateVisual()
     {
-        if (fuelBarSprite == null) return;
+        if (barHandle == null) return;
         
         // Update scale (shrink from right to left)
-        Vector3 newScale = transform.localScale;
+        Vector3 newScale = barHandle.transform.localScale;
         newScale.x = initialScaleX * currentFuel;
-        fuelBarSprite.transform.localScale = newScale;
+        barHandle.transform.localScale = newScale;
         
-        // Move position to keep left side fixed
-        float widthDifference = initialWidth * (1f - currentFuel);
-        Vector3 newPosition = initialPosition;
-        newPosition.x = initialPosition.x - (widthDifference * 0.5f);
-        fuelBarSprite.transform.position = newPosition;
+        // // Move position to keep left side fixed
+        // float widthDifference = initialWidth * (1f - currentFuel);
+        // Vector3 newPosition = initialPosition;
+        // newPosition.x = initialPosition.x - (widthDifference * 0.5f);
+        // barHandle.transform.position = newPosition;
         
         // Update color based on fuel level
         fuelBarSprite.color = Color.Lerp(emptyColor, fullColor, currentFuel);
