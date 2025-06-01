@@ -82,7 +82,7 @@ public class FUSE_ZONE : MonoBehaviour
             yield return null;
         }
 
-        ItemType? itemType = ItemType.WoodenStrop; // CraftItem(itemsToFuse[0].item, itemsToFuse[1].item);
+        ItemType? itemType = CraftItem(itemsToFuse[0].item, itemsToFuse[1].item);
 
         foreach (var item in itemsToFuse)
         {
@@ -105,7 +105,7 @@ public class FUSE_ZONE : MonoBehaviour
             icon = FindAnyObjectByType<ItemSpriteManager>().GetSpriteByItemType(itemType.Value)
         };
 
-        // FindObjectOfType<AudioManager>().Play("craftingsuccess");
+        FindObjectOfType<AudioManager>().Play("craftingsuccess");
 
         FuseTable.GetComponent<FusionMenuController>().AddCreatedItem(newItem, center);
     }
