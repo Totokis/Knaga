@@ -14,6 +14,7 @@ public class ItemMonoBehaviour : MonoBehaviour
     private Vector3 curScreenPos;
     private bool isDragging;
     [SerializeField] private bool FuseReady;
+    private bool _fuseTime;
 
     public bool isClickedOn
     {
@@ -127,8 +128,17 @@ public class ItemMonoBehaviour : MonoBehaviour
         }
         else
         {
+            if (_fuseTime)
+            {
+                return; 
+            }
             LeanTween.cancel(gameObject);
         }
+    }
+
+    public void FuseTime()
+    {
+        _fuseTime = true;
     }
 }
 
