@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 64c4f7f4e562631439ecfeff0981a5f8
+guid: 04ea45e5facc5374fb632fe05ff1815e
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 7866021410304864948
-    second: slask_0
+      213: 2612256848688485245
+    second: furgon_furgonxD_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -100,13 +100,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: slask_0
+      name: furgon_furgonxD_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 431
-        height: 431
+        x: 598
+        y: 403
+        width: 2838
+        height: 2148
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -115,8 +115,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 4b2b6d4fbc8b92d60800000000000000
-      internalID: 7866021410304864948
+      spriteID: d73982873c9904420800000000000000
+      internalID: 2612256848688485245
       vertices: []
       indices: 
       edges: []
@@ -135,7 +135,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      slask_0: 7866021410304864948
+      furgon_furgonxD_0: 2612256848688485245
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
