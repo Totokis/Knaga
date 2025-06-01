@@ -169,11 +169,11 @@ BoxCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0.17759228, y: -2.9773893}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -183,7 +183,7 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 0.0001, y: 0.0001}
+  m_Size: {x: 4.203145, y: 8.56339}
   m_EdgeRadius: 0
 --- !u!212 &49883576
 SpriteRenderer:
@@ -249,7 +249,7 @@ Transform:
   m_GameObject: {fileID: 49883574}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -10.153, y: 1.51, z: 0}
+  m_LocalPosition: {x: -7.88, y: 1.51, z: 0}
   m_LocalScale: {x: 0.7688022, y: 1.7272822, z: 0.44106075}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -268,7 +268,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2ed4ac730dc268d4eab797232fc34090, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  interactionRange: 3
+  interactionRange: 8.5
 --- !u!114 &49883579
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -290,9 +290,9 @@ MonoBehaviour:
   woodCost: 5
   oilCost: 10
   metalCost: 3
-  woodColor: {r: 0.6, g: 0.4, b: 0.2, a: 1}
-  oilColor: {r: 0.1, g: 0.1, b: 0.1, a: 1}
-  metalColor: {r: 0.7, g: 0.7, b: 0.8, a: 1}
+  woodSprite: {fileID: -3671729575880173466, guid: b0cf74b2eea34d5488aca9d6bcedcd56, type: 3}
+  oilSprite: {fileID: -6748384255609890082, guid: 608665d643be27245a100e5205867ef8, type: 3}
+  metalSprite: {fileID: 5103231540499187363, guid: 853116ebcd7859249b7addd2ee68362e, type: 3}
 --- !u!1 &135023445
 GameObject:
   m_ObjectHideFlags: 0
@@ -495,6 +495,7 @@ GameObject:
   - component: {fileID: 190734542}
   - component: {fileID: 190734543}
   - component: {fileID: 190734544}
+  - component: {fileID: 190734545}
   m_Layer: 0
   m_Name: OrganTnacy
   m_TagString: Untagged
@@ -509,7 +510,7 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 190734538}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -655,6 +656,26 @@ MonoBehaviour:
   addRandomShake: 1
   shakeChance: 0.025
   shakeStrength: 3
+--- !u!114 &190734545
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 190734538}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c1bd1227c8c04bd40bf1c076a6113d8e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  minRotation: -7
+  maxRotation: 7
+  rotationSpeed: 2
+  idleSpeed: 0.5
+  smoothSpeed: 3
+  addNoise: 1
+  noiseStrength: 1
+  noiseFrequency: 10
 --- !u!1 &294078966
 GameObject:
   m_ObjectHideFlags: 0
@@ -1395,7 +1416,7 @@ MonoBehaviour:
   m_BlendStyleIndex: 0
   m_FalloffIntensity: 0.5
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Intensity: 0.02
+  m_Intensity: 0.03
   m_LightVolumeIntensity: 1
   m_LightVolumeEnabled: 0
   m_ApplyToSortingLayers: 000000004bd3f32f
@@ -1652,7 +1673,7 @@ MonoBehaviour:
   wallSegmentPrefab: {fileID: 5460429056039791012, guid: 25df9f69ae9998447be0baaeb7e97fa7, type: 3}
   numberOfSegments: 20
   segmentSpacing: 6
-  itemDropPrefab: {fileID: 0}
+  itemDropSprite: {fileID: -228819513787663229, guid: c8d5dca76524bb241a76d80d1930bc86, type: 3}
   dropItemName: Ore
   minDropAmount: 1
   maxDropAmount: 3
@@ -2098,7 +2119,7 @@ MonoBehaviour:
   moveSpeed: 7
   acceleration: 50
   deceleration: 50
-  leftBound: -4
+  leftBound: -10
   groundY: -6
   idleAnimationClip: {fileID: 7400000, guid: 8a51010236b054a4da6e85bd7823011c, type: 2}
   walkAnimationClip: {fileID: 7400000, guid: 90eaa656c5aad3d48a0701b802b4bef8, type: 2}
@@ -3042,7 +3063,7 @@ MonoBehaviour:
   backgroundSegmentPrefab: {fileID: 494934566399239865, guid: 9f9cf93e6d3e0f24784dbb75388cb0a5, type: 3}
   ceilingSegmentPrefab: {fileID: 5851734090068483234, guid: b4be72f512094e842b5951ab9b4aa847, type: 3}
   initialSegments: 30
-  startX: -30
+  startX: -55
   floorSegmentWidth: 49.6
   backgroundSegmentWidth: 17.32
   ceilingSegmentWidth: 20
@@ -3164,6 +3185,63 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2040084443}
   m_CullTransparentMesh: 1
+--- !u!1001 &3695408866375212438
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 5687690063991670855, guid: 230621cf9dd7547448d320135349ab47, type: 3}
+      propertyPath: m_Name
+      value: HangingLamp
+      objectReference: {fileID: 0}
+    - target: {fileID: 8563168503555009539, guid: 230621cf9dd7547448d320135349ab47, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 1.3479
+      objectReference: {fileID: 0}
+    - target: {fileID: 8563168503555009539, guid: 230621cf9dd7547448d320135349ab47, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.2947
+      objectReference: {fileID: 0}
+    - target: {fileID: 8563168503555009539, guid: 230621cf9dd7547448d320135349ab47, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8563168503555009539, guid: 230621cf9dd7547448d320135349ab47, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8563168503555009539, guid: 230621cf9dd7547448d320135349ab47, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8563168503555009539, guid: 230621cf9dd7547448d320135349ab47, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8563168503555009539, guid: 230621cf9dd7547448d320135349ab47, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8563168503555009539, guid: 230621cf9dd7547448d320135349ab47, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8563168503555009539, guid: 230621cf9dd7547448d320135349ab47, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8563168503555009539, guid: 230621cf9dd7547448d320135349ab47, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 230621cf9dd7547448d320135349ab47, type: 3}
 --- !u!1001 &5578282682541929302
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3246,3 +3324,4 @@ SceneRoots:
   - {fileID: 1348439963}
   - {fileID: 294078967}
   - {fileID: 566879307}
+  - {fileID: 3695408866375212438}
