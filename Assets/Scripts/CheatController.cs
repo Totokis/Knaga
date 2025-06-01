@@ -64,7 +64,7 @@ public class CheatController : MonoBehaviour
             PlayerMessageDisplay messageDisplay = PlayerMessageDisplay.Instance;
             if (messageDisplay != null)
             {
-                messageDisplay.ShowMessage("Cheat: Added Bulb to inventory!", Color.magenta, 1.5f);
+                // messageDisplay.ShowMessage("Cheat: Added Bulb to inventory!", Color.magenta, 1.5f);
             }
         }
         else

@@ -7,6 +7,8 @@ public class Map : MonoBehaviour
     [SerializeField] private GameObject mapElements;
     [SerializeField] private Animator scrollAnimation;
     [SerializeField] private ParticleSystem pSystem;
+    [SerializeField] private Pocztowka pocztowka;
+    
     private Vector3 _initialScale;
 
 
@@ -24,7 +26,12 @@ public class Map : MonoBehaviour
             {
                 mapElements.SetActive(true);
                 LeanTween.color(mapElements, Color.black, 0.5f).setFromColor(Color.clear)
-                    .setDelay(scrollAnimation.runtimeAnimatorController.animationClips.First().length+0.5f);
+                    .setDelay(scrollAnimation.runtimeAnimatorController.animationClips.First().length+0.5f).setOnComplete((
+                        () =>
+                        {
+                            pocztowka.ShowPocztowka();
+                        } ));
+              
                 pSystem.Play();
             });
         

@@ -102,7 +102,7 @@ public class LampPlacementController : MonoBehaviour
             
             if (messageDisplay != null)
             {
-                messageDisplay.ShowInteraction("Click to place lamp, Right-click to cancel");
+                // messageDisplay.ShowInteraction("Click to place lamp, Right-click to cancel");
             }
         }
         else
@@ -205,7 +205,7 @@ public class LampPlacementController : MonoBehaviour
         {
             if (messageDisplay != null)
             {
-                messageDisplay.ShowMessage("No bulbs in inventory!", Color.red, 2f);
+                // messageDisplay.ShowMessage("No bulbs in inventory!", Color.red, 2f);
             }
         }
     }

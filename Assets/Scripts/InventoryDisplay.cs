@@ -1,6 +1,7 @@
 using UnityEngine;
 using TMPro;
 using System.Collections.Generic;
+using UnityEngine.Serialization;
 
 public class InventoryDisplay : MonoBehaviour
 {
@@ -18,7 +19,7 @@ public class InventoryDisplay : MonoBehaviour
     public Sprite metalSprite;
     public Sprite coalSprite;
 
-    private Camera mainCamera;
+    public Camera thisiscamera;
     private PlayerInventory inventory;
     private GameObject background;
     private List<InventoryItemUI> itemUIList = new List<InventoryItemUI>();
@@ -41,7 +42,6 @@ public class InventoryDisplay : MonoBehaviour
 
     void Start()
     {
-        mainCamera = Camera.main;
         inventory = PlayerInventory.Instance;
 
         SetupBackground();
@@ -68,11 +68,11 @@ public class InventoryDisplay : MonoBehaviour
 
     void Update()
     {
-        if (mainCamera == null) return;
+        if (thisiscamera == null) return;
 
         // Pozycjonowanie w lewym dolnym rogu
         Vector3 screenPos = new Vector3(screenOffset.x, screenOffset.y, 10f);
-        Vector3 worldPos = mainCamera.ScreenToWorldPoint(screenPos);
+        Vector3 worldPos = thisiscamera.ScreenToWorldPoint(screenPos);
         transform.position = new Vector3(worldPos.x, worldPos.y, 0f);
 
         // Aktualizacja zawartości co kilka klatek
