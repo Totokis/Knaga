@@ -9,6 +9,11 @@ public class FUSE_ZONE : MonoBehaviour
 {
     public List<ItemMonoBehaviour> itemsToFuse = new List<ItemMonoBehaviour>();
     public GameObject FuseTable;
+    public void Start()
+    {
+        if (FuseTable == null)
+            FuseTable = transform.parent.gameObject;
+    }
     private void OnTriggerEnter(Collider other)
     {
         if (other.GetComponent<ItemMonoBehaviour>() != null)
