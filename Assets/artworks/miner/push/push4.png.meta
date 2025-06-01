@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 558c2e9722b654742aeb279068d2b4cc
+guid: 30730d4d2d3b4964d84857599564f584
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 1811692627042598385
-    second: furgon_worek_0
+      213: -6590440020203635893
+    second: push4_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -46,7 +46,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -100,13 +100,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: furgon_worek_0
+      name: push4_0
       rect:
         serializedVersion: 2
-        x: 2399
-        y: 2332
-        width: 812
-        height: 675
+        x: 69
+        y: 52
+        width: 371
+        height: 460
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -115,8 +115,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 1fd711578dc642910800000000000000
-      internalID: 1811692627042598385
+      spriteID: b4b7e3228bd0a84a0800000000000000
+      internalID: -6590440020203635893
       vertices: []
       indices: 
       edges: []
@@ -125,7 +125,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 5e97eb03825dee720800000000000000
+    spriteID: 
     internalID: 0
     vertices: []
     indices: 
@@ -135,7 +135,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      furgon_worek_0: 1811692627042598385
+      push4_0: -6590440020203635893
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
