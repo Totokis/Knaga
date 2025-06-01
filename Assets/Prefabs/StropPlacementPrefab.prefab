@@ -102,5 +102,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   interactionDistance: 3
   hasStropInstalled: 1
-  emptyAlpha: 0.7
+  emptyAlpha: 0.05
   installedAlpha: 1
