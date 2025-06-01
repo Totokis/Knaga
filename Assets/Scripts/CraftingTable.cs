@@ -46,17 +46,17 @@ public class CraftingTable : MonoBehaviour
         if (isInRange && Keyboard.current.eKey.wasPressedThisFrame)
         {
             OpenFusionMenu();
-            // Item newItem = player.GetComponent<PlayerInventory>().GetCurrentItem();
-            // if(newItem != null)
-            // {
-            //     if (CurrentItem != null)
-            //     {
-            //         CraftItem(CurrentItem, newItem);
-            //     }
-            //     else
-            //         CurrentItem = newItem;
-            // }
         }
+
+        if (Keyboard.current.escapeKey.wasPressedThisFrame)
+        {
+            CloseFusionMenu();
+        }
+    }
+
+    private void CloseFusionMenu()
+    {
+        fusionMenu.GetComponent<FusionMenuController>().CloseTable();
     }
 
     private void OpenFusionMenu()

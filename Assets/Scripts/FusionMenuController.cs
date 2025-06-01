@@ -7,6 +7,10 @@ public class FusionMenuController: MonoBehaviour
 {
     [SerializeField] private List<Item> _items = new List<Item>();
     [SerializeField] private float radius = 2f;
+    [SerializeField] private GameObject spawnPoint;
+    
+    private List<ItemMonoBehaviour> _itemMonos = new List<ItemMonoBehaviour>();
+    
     
 
     public void SetCraftingTable(PlayerInventory inventory)
@@ -25,7 +29,7 @@ public class FusionMenuController: MonoBehaviour
         for (int i = 0; i < _items.Count; i++)
         {
             float angle = i * Mathf.PI * 2f / _items.Count;
-            Vector3 pos = transform.position + new Vector3(Mathf.Cos(angle), Mathf.Sin(angle), 0) * radius;
+            Vector3 pos = spawnPoint.transform.position + new Vector3(Mathf.Cos(angle), Mathf.Sin(angle), 0) * radius;
             GameObject go = new GameObject(_items[i].itemName)
             {
                 transform =
@@ -36,10 +40,24 @@ public class FusionMenuController: MonoBehaviour
             };
             var itemMb = go.AddComponent<ItemMonoBehaviour>();
             itemMb.SetItem(_items[i]);
+            _itemMonos.Add(itemMb);
           
         }
 
     }
-    
-    
+
+
+    public void CloseTable()
+    {
+        foreach (var itemMono in _itemMonos)
+        {
+            if (itemMono != null)
+            {
+                Destroy(itemMono.gameObject);
+            }
+        }
+        _itemMonos.Clear();
+        _items.Clear();
+        
+    }
 }

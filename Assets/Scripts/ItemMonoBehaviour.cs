@@ -13,6 +13,7 @@ public class ItemMonoBehaviour : MonoBehaviour
     private InputSystem_Actions _input;
     private Vector3 curScreenPos;
     private bool isDragging;
+    [SerializeField] private bool FuseReady;
 
     public bool isClickedOn
     {
@@ -101,7 +102,8 @@ public class ItemMonoBehaviour : MonoBehaviour
                 sr.color = item.color;
             }
             
-            gameObject.AddComponent<BoxCollider>();
+            gameObject.AddComponent<SphereCollider>();
+            
         }
     }
 
@@ -111,6 +113,22 @@ public class ItemMonoBehaviour : MonoBehaviour
     public Item GetItem()
     {
         return item;
+    }
+
+    public void MarkReadyToFuse(bool b)
+    {
+        FuseReady = b;
+        if (FuseReady)
+        {
+           LeanTween.rotateZ(gameObject, 10f, 0.15f)
+               .setEase(LeanTweenType.easeShake)
+               .setLoopPingPong()
+               .setOnComplete(() => LeanTween.rotateZ(gameObject, 0f, 0.1f));
+        }
+        else
+        {
+            LeanTween.cancel(gameObject);
+        }
     }
 }
 
