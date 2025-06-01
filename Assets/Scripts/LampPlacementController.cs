@@ -25,6 +25,8 @@ public class LampPlacementController : MonoBehaviour
     private bool isPreviewMode = false;
     private Vector2 lastValidPosition;
     private HashSet<Vector2> existingLampPositions = new HashSet<Vector2>();
+
+    public Sprite lampSprite;
     
     void Start()
     {
@@ -102,7 +104,7 @@ public class LampPlacementController : MonoBehaviour
             
             if (messageDisplay != null)
             {
-                // messageDisplay.ShowInteraction("Click to place lamp, Right-click to cancel");
+                messageDisplay.ShowSprite(lampSprite);
             }
         }
         else
@@ -186,7 +188,7 @@ public class LampPlacementController : MonoBehaviour
         {
             // Create lamp placement point
             GameObject newLamp = Instantiate(lampPlacementPointPrefab, new Vector3(position.x, position.y, 0), Quaternion.identity);
-            
+
             // Mark it as already having a lamp installed
             LampPlacementPoint lampPoint = newLamp.GetComponent<LampPlacementPoint>();
             if (lampPoint != null)
@@ -194,19 +196,12 @@ public class LampPlacementController : MonoBehaviour
                 lampPoint.enabled = true;
                 // The lamp will be installed through the normal interaction system
             }
-            
+
             // Add to existing positions
             existingLampPositions.Add(position);
-            
+
             // Exit preview mode
             TogglePreviewMode();
-        }
-        else
-        {
-            if (messageDisplay != null)
-            {
-                // messageDisplay.ShowMessage("No bulbs in inventory!", Color.red, 2f);
-            }
         }
     }
     

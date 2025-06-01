@@ -19,7 +19,10 @@ public class LampPlacementPoint : MonoBehaviour
     private PlayerInventory playerInventory;
     private GameObject player;
     private PlayerMessageDisplay messageDisplay;
-    
+
+    [Header("Sprites")]
+    public Sprite lampSprite;
+
     private bool playerInRange = false;
 
     void Start()
@@ -88,7 +91,7 @@ public class LampPlacementPoint : MonoBehaviour
             if (playerInventory != null && playerInventory.HasItem("Bulb") && messageDisplay != null)
             {
                 Debug.LogWarning($"[LampPlacementPoint] Player has Bulb, showing interaction prompt");
-                // messageDisplay.ShowInteraction("Press E to install lamp");
+                messageDisplay.ShowSprite(lampSprite);
             }
             else
             {
@@ -117,11 +120,6 @@ public class LampPlacementPoint : MonoBehaviour
         {
             hasLampInstalled = true;
             UpdateLampState();
-            
-            if (messageDisplay != null)
-            {
-                // messageDisplay.ShowMessage("Lamp installed!", Color.green, 2f);
-            }
             
             // Play sound effect if available
             AudioSource audioSource = GetComponent<AudioSource>();
