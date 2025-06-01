@@ -1735,9 +1735,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   screenOffset: {x: 454, y: 134.8}
+  itemSpacing: 10
+  spriteSize: 0.5
   textSize: 24
   textColor: {r: 1, g: 1, b: 1, a: 1}
   backgroundColor: {r: 0, g: 0, b: 0, a: 0.8}
+  woodSprite: {fileID: 0}
+  oilSprite: {fileID: 0}
+  metalSprite: {fileID: 0}
+  coalSprite: {fileID: 0}
 --- !u!4 &968794697 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2547439464390918348, guid: 25df9f69ae9998447be0baaeb7e97fa7, type: 3}
@@ -2471,6 +2477,9 @@ MonoBehaviour:
   fadeSpeed: 2
   textSize: 18
   defaultColor: {r: 1, g: 1, b: 1, a: 1}
+  woodSprite: {fileID: 0}
+  oilSprite: {fileID: 0}
+  metalSprite: {fileID: 0}
 --- !u!1 &1751693159 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 3932386543999755674, guid: ecf52668f742642438704722640fa64b, type: 3}
@@ -3425,6 +3434,22 @@ PrefabInstance:
     - target: {fileID: 3932386543999755674, guid: ecf52668f742642438704722640fa64b, type: 3}
       propertyPath: m_Name
       value: table
+      objectReference: {fileID: 0}
+    - target: {fileID: 7498777471386646412, guid: ecf52668f742642438704722640fa64b, type: 3}
+      propertyPath: m_Size.x
+      value: 40
+      objectReference: {fileID: 0}
+    - target: {fileID: 7498777471386646412, guid: ecf52668f742642438704722640fa64b, type: 3}
+      propertyPath: m_Size.y
+      value: 29.316406
+      objectReference: {fileID: 0}
+    - target: {fileID: 7498777471386646412, guid: ecf52668f742642438704722640fa64b, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 1464340706325585963, guid: c67c23e0adf14ca41b32ef3cff2cbd7b, type: 3}
+    - target: {fileID: 7498777471386646412, guid: ecf52668f742642438704722640fa64b, type: 3}
+      propertyPath: m_WasSpriteAssigned
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
