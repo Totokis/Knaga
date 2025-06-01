@@ -926,6 +926,10 @@ PrefabInstance:
       propertyPath: TracksSprite
       value: 
       objectReference: {fileID: -8394149318895849603, guid: 65c3658941de2e640a2de99e1ffe0891, type: 3}
+    - target: {fileID: 5083890741231639246, guid: 1ebca1b4ba5cebc4dbf38161410c931f, type: 3}
+      propertyPath: Bulbitemsprite
+      value: 
+      objectReference: {fileID: 2282682736959786443, guid: 824474b209b7dd24cbf6a1914d201010, type: 3}
     - target: {fileID: 7318986431302699983, guid: 1ebca1b4ba5cebc4dbf38161410c931f, type: 3}
       propertyPath: m_LocalPosition.x
       value: 2.701527
@@ -1140,7 +1144,8 @@ MonoBehaviour:
   m_RequiresDepthTextureOption: 2
   m_RequiresOpaqueTextureOption: 2
   m_CameraType: 0
-  m_Cameras: [{fileID: 251310991}]
+  m_Cameras:
+  - {fileID: 251310991}
   m_RendererIndex: -1
   m_VolumeLayerMask:
     serializedVersion: 2
@@ -1415,6 +1420,55 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 642330050}
   m_CullTransparentMesh: 1
+--- !u!1 &715800044
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 715800046}
+  - component: {fileID: 715800045}
+  m_Layer: 0
+  m_Name: Global Volume
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &715800045
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 715800044}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 172515602e62fb746b5d573b38a5fe58, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_IsGlobal: 1
+  priority: 0
+  blendDistance: 0
+  weight: 1
+  sharedProfile: {fileID: 11400000, guid: 26fd924a3d9c5fe4fa912d90077fac40, type: 2}
+--- !u!4 &715800046
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 715800044}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 2.2569728, y: 0.7457797, z: -1.9621183}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &788043280
 GameObject:
   m_ObjectHideFlags: 0
@@ -1460,55 +1514,6 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 18.14364, y: -5.87737, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &715800044
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 715800046}
-  - component: {fileID: 715800045}
-  m_Layer: 0
-  m_Name: Global Volume
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &715800045
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 715800044}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 172515602e62fb746b5d573b38a5fe58, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_IsGlobal: 1
-  priority: 0
-  blendDistance: 0
-  weight: 1
-  sharedProfile: {fileID: 11400000, guid: 26fd924a3d9c5fe4fa912d90077fac40, type: 2}
---- !u!4 &715800046
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 715800044}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 2.2569728, y: 0.7457797, z: -1.9621183}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2215,7 +2220,7 @@ PrefabInstance:
     - target: {fileID: 2792481721458901222, guid: 4fcf290949c1274488e8e8b19079ae40, type: 3}
       propertyPath: fushionSprite
       value: 
-      objectReference: {fileID: -1781771002308868529, guid: b566a398c21e70a43a3b524fddc93f39, type: 3}
+      objectReference: {fileID: 21300000, guid: b566a398c21e70a43a3b524fddc93f39, type: 3}
     - target: {fileID: 5669933176972648918, guid: 4fcf290949c1274488e8e8b19079ae40, type: 3}
       propertyPath: m_Name
       value: Furgon Furzji
@@ -2760,8 +2765,8 @@ MonoBehaviour:
   spriteDuration: 0.5
   fadeSpeed: 1
   spriteSize: 0.35
-  tradeSprite: {fileID: -4283831472639535673, guid: c32891a0ea381ee41ba9cf1fcf233b37, type: 3}
-  pickUpSprite: {fileID: -5108589095578684723, guid: 0330bcca0e0f5194ba465301cf0d231e, type: 3}
+  tradeSprite: {fileID: 21300000, guid: c32891a0ea381ee41ba9cf1fcf233b37, type: 3}
+  pickUpSprite: {fileID: 21300000, guid: 0330bcca0e0f5194ba465301cf0d231e, type: 3}
   Maberial: {fileID: 2100000, guid: 9dfc825aed78fcd4ba02077103263b40, type: 2}
 --- !u!1 &1757387907
 GameObject:
@@ -3490,6 +3495,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6355147362573644540, guid: 7397fe7d7d173db4db18585c46ad804b, type: 3}
+      propertyPath: lampSprite
+      value: 
+      objectReference: {fileID: 1013858075017905448, guid: ece4740bfead9a040bfea0f0c118b9c7, type: 3}
     - target: {fileID: 6372030200274227376, guid: 7397fe7d7d173db4db18585c46ad804b, type: 3}
       propertyPath: m_Name
       value: LampPlacementController

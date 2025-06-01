@@ -64,7 +64,7 @@ public class CheatController : MonoBehaviour
         
         // Create bulb item
         Item bulb = new Item("Bulb", 1, ItemType.Bulb);
-        bulb.icon = itemSpriteManager.BulbSprite;
+        bulb.icon = itemSpriteManager.Bulbitemsprite;
         bulb.color = Color.yellow;
         
         Debug.LogWarning($"[CheatController] Created item: Name={bulb.itemName}, Type={bulb.itemType}, Amount={bulb.amount}, HasIcon={bulb.icon != null}");

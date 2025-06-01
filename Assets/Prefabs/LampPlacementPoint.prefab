@@ -104,6 +104,8 @@ MonoBehaviour:
   interactionDistance: 3
   hasLampInstalled: 0
   emptyPlaceholderAlpha: 0.5
+  installedAlpha: 1
+  lampSprite: {fileID: 21300000, guid: ece4740bfead9a040bfea0f0c118b9c7, type: 3}
 --- !u!1 &7512955514311777667
 GameObject:
   m_ObjectHideFlags: 0
