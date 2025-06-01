@@ -100,7 +100,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: af2d46dbfe7f66449b72f0e41976a158, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  sprite: {fileID: 0}
   interactionDistance: 3
-  hasStropInstalled: 1
+  hasStropInstalled: 0
   emptyAlpha: 0.05
   installedAlpha: 1
