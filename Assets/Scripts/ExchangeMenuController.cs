@@ -107,18 +107,16 @@ public class ExchangeMenuController : MonoBehaviour
     void DropItem(string name, Sprite itemSprite)
     {
         GameObject obj = new GameObject("DroppedItem");
-        obj.transform.position = transform.position + Vector3.right * 2 + Vector3.down * 2.5f;
+        obj.transform.position = transform.position + Vector3.right * 2 + Vector3.down * 8f;
 
         SpriteRenderer sr = obj.AddComponent<SpriteRenderer>();
 
         if (itemSprite != null)
         {
             sr.sprite = itemSprite;
-            Debug.LogWarning("Successfully assigned sprite: " + itemSprite.name);
         }
         else
         {
-            Debug.LogError("No sprite assigned for " + name + "!");
             return; 
         }
 
