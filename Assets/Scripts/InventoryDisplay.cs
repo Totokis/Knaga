@@ -17,6 +17,7 @@ public class InventoryDisplay : MonoBehaviour
     public Sprite oilSprite;
     public Sprite metalSprite;
     public Sprite coalSprite;
+    public Material Maberial;
 
     private Camera mainCamera;
     private PlayerInventory inventory;
@@ -26,9 +27,10 @@ public class InventoryDisplay : MonoBehaviour
     // Pozycje dla pierwszych trzech elementów
     private Vector3[] itemPositions = new Vector3[]
     {
-        new Vector3(-3.5f, -1f, 0f),  // Pierwszy element
-        new Vector3(0f, -1f, 0f),     // Drugi element
-        new Vector3(3.5f, -1f, 0f)    // Trzeci element
+        new Vector3(-2.3f, -1f, 0f),  // Pierwszy element
+        new Vector3(0.8f, -1f, 0f),     // Drugi element
+        new Vector3(3.9f, -1f, 0f),    // Trzeci element
+        new Vector3(7f, -1f, 0f)    
     };
 
     [System.Serializable]
@@ -60,8 +62,7 @@ public class InventoryDisplay : MonoBehaviour
 
         // Ustawienie materiału i koloru
         MeshRenderer bgRenderer = background.GetComponent<MeshRenderer>();
-        bgRenderer.material = new Material(Shader.Find("Sprites/Default"));
-        bgRenderer.material.color = backgroundColor;
+        bgRenderer.material = Maberial;
         bgRenderer.sortingLayerName = "UI";
         bgRenderer.sortingOrder = 998;
     }
@@ -146,6 +147,7 @@ public class InventoryDisplay : MonoBehaviour
 
         itemUI.spriteRenderer = spriteObj.AddComponent<SpriteRenderer>();
         itemUI.spriteRenderer.sprite = item.icon;
+        itemUI.spriteRenderer.material = Maberial;
         itemUI.spriteRenderer.sortingLayerName = "UI";
         itemUI.spriteRenderer.sortingOrder = 1000;
 
