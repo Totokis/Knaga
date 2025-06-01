@@ -10,6 +10,12 @@ public class PlayerMessageDisplay : MonoBehaviour
     public float fadeSpeed = 2f;
     public float textSize = 18f;
     public Color defaultColor = Color.white;
+
+    
+    [Header("Item Sprites")]
+    public Sprite woodSprite;
+    public Sprite oilSprite;
+    public Sprite metalSprite;
     
     private TextMeshPro messageText;
     private Transform playerTransform;

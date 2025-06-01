@@ -16,6 +16,9 @@ public class CraftingTable : MonoBehaviour
     private PlayerMessageDisplay messageDisplay;
     private bool isInRange = false;
 
+    [Header("Item Sprites")]
+    public Sprite metalSprite;
+
     void Start()
     {
         GameObject p = GameObject.Find("Player");
@@ -81,6 +84,7 @@ public class CraftingTable : MonoBehaviour
             {
                 itemName = "Metal",
                 itemType = ItemType.Metal,
+                icon = metalSprite,
                 amount = 1
             };
         }
@@ -144,12 +148,13 @@ public class CraftingTable : MonoBehaviour
         sr.sortingOrder = 1;
         obj.transform.localScale = Vector3.one * 0.6f;
 
-        Sprite sprite = FindObjectOfType<ItemSpriteManager>().GetSpriteByItemType(item.itemType);
+        Sprite sprite = FindAnyObjectByType<ItemSpriteManager>().GetSpriteByItemType(item.itemType);
 
         obj.GetComponent<SpriteRenderer>().sprite = sprite;
 
         ItemPickup pickup = obj.AddComponent<ItemPickup>();
         pickup.itemData = item;
+        pickup.itemData.icon = item.icon;
         // pickup.itemData.color = color;
     }
 }
