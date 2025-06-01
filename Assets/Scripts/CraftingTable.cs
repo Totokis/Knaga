@@ -137,7 +137,7 @@ public class CraftingTable : MonoBehaviour
     void DropItem(Item item)
     {
         GameObject obj = new GameObject("ItemFromCrafting");
-        obj.transform.position = transform.position + Vector3.right * 2 + Vector3.down * 2.5f; // drobny random na boki?
+        obj.transform.position = transform.position + Vector3.right * 2 + Vector3.down * (-3f); // drobny random na boki?
 
         SpriteRenderer sr = obj.AddComponent<SpriteRenderer>();
         // sr.color = color;
