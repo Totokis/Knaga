@@ -1767,6 +1767,7 @@ MonoBehaviour:
   oilSprite: {fileID: -6748384255609890082, guid: 608665d643be27245a100e5205867ef8, type: 3}
   metalSprite: {fileID: 5103231540499187363, guid: 853116ebcd7859249b7addd2ee68362e, type: 3}
   coalSprite: {fileID: -228819513787663229, guid: c8d5dca76524bb241a76d80d1930bc86, type: 3}
+  Maberial: {fileID: 2100000, guid: 9dfc825aed78fcd4ba02077103263b40, type: 2}
 --- !u!4 &968794697 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2547439464390918348, guid: 25df9f69ae9998447be0baaeb7e97fa7, type: 3}
@@ -2027,7 +2028,7 @@ PrefabInstance:
     - target: {fileID: 2792481721458901222, guid: 4fcf290949c1274488e8e8b19079ae40, type: 3}
       propertyPath: fushionSprite
       value: 
-      objectReference: {fileID: -1781771002308868529, guid: a17a016a2957b2e4ea6668a2539b3c12, type: 3}
+      objectReference: {fileID: -1781771002308868529, guid: b566a398c21e70a43a3b524fddc93f39, type: 3}
     - target: {fileID: 5669933176972648918, guid: 4fcf290949c1274488e8e8b19079ae40, type: 3}
       propertyPath: m_Name
       value: Furgon Furzji
@@ -2568,13 +2569,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b3fe500303a605148bb5a4326704cd1b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  spriteHeight: 1.5
-  spriteDuration: 3
-  fadeSpeed: 0.5
-  spriteSize: 1
-  tradeSprite: {fileID: 0}
-  pickUpSprite: {fileID: 0}
-  Maberial: {fileID: 0}
+  spriteHeight: 5
+  spriteDuration: 0.5
+  fadeSpeed: 1
+  spriteSize: 0.35
+  tradeSprite: {fileID: -4283831472639535673, guid: c32891a0ea381ee41ba9cf1fcf233b37, type: 3}
+  pickUpSprite: {fileID: -5108589095578684723, guid: 0330bcca0e0f5194ba465301cf0d231e, type: 3}
+  Maberial: {fileID: 2100000, guid: 9dfc825aed78fcd4ba02077103263b40, type: 2}
 --- !u!1 &1757387907
 GameObject:
   m_ObjectHideFlags: 0
@@ -3196,6 +3197,7 @@ MonoBehaviour:
   hasLampInstalled: 1
   emptyPlaceholderAlpha: 0.5
   installedAlpha: 1
+  lampSprite: {fileID: 0}
 --- !u!1001 &3963239501089090357
 PrefabInstance:
   m_ObjectHideFlags: 0

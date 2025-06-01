@@ -1,12 +1,19 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.Analytics;
 
 public class FUSE_ZONE : MonoBehaviour
 {
     public List<ItemMonoBehaviour> itemsToFuse = new List<ItemMonoBehaviour>();
-    
+    public GameObject FuseTable;
+    public void Start()
+    {
+        if (FuseTable == null)
+            FuseTable = transform.parent.gameObject;
+    }
     private void OnTriggerEnter(Collider other)
     {
         if (other.GetComponent<ItemMonoBehaviour>() != null)
@@ -16,15 +23,19 @@ public class FUSE_ZONE : MonoBehaviour
             CheckIfItemsCanFuse();
         }
     }
-
+    private Boolean _fuzing = false;
     private void CheckIfItemsCanFuse()
     {
-       if (itemsToFuse.Count >= 2)
+       if (itemsToFuse.Count >= 2 && !_fuzing && CanBeFuzed(itemsToFuse[0].item, itemsToFuse[1].item))
        {
+            _fuzing = true;
            FuseItems();
        }
     }
-
+    private Boolean CanBeFuzed(Item item1, Item item2)
+    {
+        return CraftItem(item1, item2) != null;
+    }
     private void FuseItems()
     {
         foreach (var item in itemsToFuse)
@@ -71,11 +82,49 @@ public class FUSE_ZONE : MonoBehaviour
             yield return null;
         }
 
+        ItemType? itemType = CraftItem(itemsToFuse[0].item, itemsToFuse[1].item);
+
         foreach (var item in itemsToFuse)
         {
             LeanTween.scale(item.gameObject, Vector3.zero, 0.2f).setOnComplete(() => Destroy(item.gameObject));
+            //Destroy(item.gameObject);
         }
         itemsToFuse.Clear();
+
+        _fuzing = false;
+        // Create new item at "center"
+
+        // 
+
+
+        Item newItem = new Item()
+        {
+            itemName = itemType.ToString(),
+            itemType = itemType.Value,
+            amount = 1,
+            icon = FindAnyObjectByType<ItemSpriteManager>().GetSpriteByItemType(itemType.Value)
+        };
+
+        FuseTable.GetComponent<FusionMenuController>().AddCreatedItem(newItem, center);
+    }
+
+    public ItemType? CraftItem(Item item1, Item item2)
+    {
+        if (item1.itemType == ItemType.Wood && item2.itemType == ItemType.Wood)
+            return ItemType.WoodenStrop;
+        if (item1.itemType == ItemType.Coal && item2.itemType == ItemType.Coal) // for tests
+            return ItemType.Metal;
+        else if (item1.itemType == ItemType.Metal && item2.itemType == ItemType.Metal)
+            return ItemType.MetalStrop;
+        else if ((item1.itemType == ItemType.Wood && item2.itemType == ItemType.Coal) || (item1.itemType == ItemType.Coal && item2.itemType == ItemType.Wood))
+            return ItemType.Torch;
+        else if ((item1.itemType == ItemType.Metal && item2.itemType == ItemType.Coal) || (item1.itemType == ItemType.Coal && item2.itemType == ItemType.Metal))
+            return ItemType.Bulb;
+        else if ((item1.itemType == ItemType.Metal && item2.itemType == ItemType.Wood) || (item1.itemType == ItemType.Wood && item2.itemType == ItemType.Metal))
+            return ItemType.Tracks;
+
+        Debug.Log("No fusion recipe");
+        return null;
     }
     private void OnTriggerExit(Collider other)
     {
