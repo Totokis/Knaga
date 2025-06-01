@@ -105,7 +105,7 @@ public class FUSE_ZONE : MonoBehaviour
             icon = FindAnyObjectByType<ItemSpriteManager>().GetSpriteByItemType(itemType.Value)
         };
 
-        FindObjectOfType<AudioManager>().Play("craftingsuccess");
+        // FindObjectOfType<AudioManager>().Play("craftingsuccess");
 
         FuseTable.GetComponent<FusionMenuController>().AddCreatedItem(newItem, center);
     }
