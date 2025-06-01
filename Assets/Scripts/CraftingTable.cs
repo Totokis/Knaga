@@ -41,12 +41,12 @@ public class CraftingTable : MonoBehaviour
         isInRange = dist <= interactionRange;
 
         // Show prompt when entering range
-        if (isInRange && !wasInRange && messageDisplay != null)
+        if (isInRange && !wasInRange && messageDisplay != null && !IsOpened())
         {
             messageDisplay.ShowInteraction("Press E to put item to fusion");
         }
 
-        if (isInRange && Keyboard.current.eKey.wasPressedThisFrame)
+        if (isInRange && Keyboard.current.eKey.wasPressedThisFrame && !IsOpened())
         {
             OpenFusionMenu();
         }
@@ -62,12 +62,14 @@ public class CraftingTable : MonoBehaviour
         fusionMenu.GetComponent<FusionMenuController>().CloseTable();
         fusionMenu.SetActive(false);
     }
-
+    public Boolean IsOpened()
+    {
+        return fusionMenu.activeInHierarchy;
+    }
     private void OpenFusionMenu()
     {
         fusionMenu.SetActive(true);
         fusionMenu.GetComponent<FusionMenuController>().SetCraftingTable(player.GetComponent<PlayerInventory>());
-        
     }
 
     void OnDrawGizmosSelected()
