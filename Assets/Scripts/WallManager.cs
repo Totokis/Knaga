@@ -12,7 +12,7 @@ public class WallManager : MonoBehaviour
     [SerializeField] public float segmentSpacing = 1f;
     
     [Header("Loot Settings")]
-    [SerializeField] public GameObject itemDropPrefab;
+    [SerializeField] public Sprite itemDropSprite;
     [SerializeField] public string dropItemName = "Ore";
     [SerializeField] public int minDropAmount = 1;
     [SerializeField] public int maxDropAmount = 3;
@@ -113,49 +113,39 @@ public class WallManager : MonoBehaviour
             CreateWallSegment(maxX + segmentSpacing, wallY, wallSegments.Count + 100);
         }
     }
-    
+
     void DropItem(Vector3 position)
     {
-        GameObject droppedItem = null;
-        
-        if (itemDropPrefab != null)
+        if (itemDropSprite == null)
         {
-            // Use prefab
-            droppedItem = Instantiate(itemDropPrefab);
+            Debug.LogWarning("Item drop sprite is not assigned!");
+            return;
         }
-        else
-        {
-            // Create item from scratch
-            droppedItem = new GameObject("DroppedItem");
-            droppedItem.AddComponent<SpriteRenderer>();
-            droppedItem.AddComponent<CircleCollider2D>();
-        }
-        
-        // Position on ground
+
+        // Tworzenie nowego obiektu z podstawowymi komponentami
+        GameObject droppedItem = new GameObject("DroppedItem");
+
+        // Dodawanie SpriteRenderer i ustawianie sprite
+        SpriteRenderer spriteRenderer = droppedItem.AddComponent<SpriteRenderer>();
+        spriteRenderer.sprite = itemDropSprite;
+        spriteRenderer.color = itemColor;
+
+        // Dodawanie kolizji
+        CircleCollider2D collider = droppedItem.AddComponent<CircleCollider2D>();
+        collider.isTrigger = true;
+
+        // Pozycjonowanie na ziemi
         droppedItem.transform.position = new Vector3(position.x, -5.5f, 0);
-        
-        // Add ItemPickup component
-        ItemPickup pickup = droppedItem.GetComponent<ItemPickup>();
-        if (pickup == null)
-        {
-            pickup = droppedItem.AddComponent<ItemPickup>();
-        }
-        
-        // Setup item data
+
+        // Dodawanie komponentu ItemPickup
+        ItemPickup pickup = droppedItem.AddComponent<ItemPickup>();
+
+        // Ustawianie danych przedmiotu
         int dropAmount = Random.Range(minDropAmount, maxDropAmount + 1);
         pickup.itemData = new Item(dropItemName, dropAmount);
-        pickup.itemData.color = itemColor;
-        
-        // Setup sprite
-        SpriteRenderer sr = droppedItem.GetComponent<SpriteRenderer>();
-        if (sr != null)
-        {
-            sr.sprite = Resources.Load<Sprite>("whitesquare");
-            sr.color = itemColor;
-            sr.sortingOrder = 1;
-            droppedItem.transform.localScale = new Vector3(0.5f, 0.5f, 1f);
-        }
-        
-        Debug.Log($"Dropped {dropAmount} {dropItemName} at position {position}");
+        pickup.itemData.icon = itemDropSprite;
+
+        // Opcjonalnie: dodaj tag dla ³atwiejszego zarz¹dzania
+        droppedItem.tag = "DroppedItem";
     }
 }
