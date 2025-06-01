@@ -7,6 +7,9 @@ public class WallManager : MonoBehaviour
     [Header("Wall Prefab")]
     [SerializeField] public GameObject wallSegmentPrefab;
     
+    
+    [SerializeField] public GameObject szybPrefab;
+    
     [Header("Wall Generation Settings")]
     [SerializeField] public int numberOfSegments = 20;
     [SerializeField] public float segmentSpacing = 1f;
@@ -59,7 +62,7 @@ public class WallManager : MonoBehaviour
             return;
         }
         
-        GameObject rightmostWall = wallSegments[wallSegments.Count - 1];
+        GameObject rightmostWall = wallSegments[^1];
         float startX = rightmostWall.transform.position.x;
         float wallY = rightmostWall.transform.position.y;
         
@@ -69,9 +72,33 @@ public class WallManager : MonoBehaviour
         {
             float xPos = startX + ((i + 1) * segmentSpacing);
             CreateWallSegment(xPos, wallY, wallSegments.Count + i + 1);
+            
         }
+
+        CreateNewSzyb(startX+(segmentsToGenerate+1)*segmentSpacing, wallY);
+    }
+
+    private void CreateNewSzyb(float segmentsToGenerate, float wallY)
+    {
+        GameObject newSzyb = Instantiate(szybPrefab, transform);
+        newSzyb.name = "Szyb";
+        newSzyb.transform.position = new Vector3(segmentsToGenerate, wallY, 0);
+        
+        if (!newSzyb.CompareTag("WallSegment"))
+        {
+            newSzyb.tag = "WallSegment";
+        }
+        
+        BoxCollider2D col = newSzyb.GetComponent<BoxCollider2D>();
+        if (col != null)
+        {
+            col.isTrigger = false;
+        }
+        
+        wallSegments.Add(newSzyb);
     }
     
+
     GameObject CreateWallSegment(float xPosition, float yPosition, int index)
     {
         if (wallSegmentPrefab == null) return null;
@@ -103,15 +130,15 @@ public class WallManager : MonoBehaviour
         // Remove from list
         wallSegments.Remove(destroyedWall);
         
-        // Generate new wall segment
-        if (wallSegments.Count > 0)
-        {
-            GameObject rightmostWall = wallSegments.OrderBy(w => w.transform.position.x).Last();
-            float maxX = rightmostWall.transform.position.x;
-            float wallY = rightmostWall.transform.position.y;
-            
-            CreateWallSegment(maxX + segmentSpacing, wallY, wallSegments.Count + 100);
-        }
+        // // Generate new wall segment
+        // if (wallSegments.Count > 0)
+        // {
+        //     GameObject rightmostWall = wallSegments.OrderBy(w => w.transform.position.x).Last();
+        //     float maxX = rightmostWall.transform.position.x;
+        //     float wallY = rightmostWall.transform.position.y;
+        //     
+        //     CreateWallSegment(maxX + segmentSpacing, wallY, wallSegments.Count + 100);
+        // }
     }
 
     void DropItem(Vector3 position)
