@@ -12,7 +12,18 @@ public class PlayerInventory : MonoBehaviour
     
     private static PlayerInventory instance;
     public static PlayerInventory Instance => instance;
-    
+    public Item GetCurrentItem()
+    {
+        if (items.Any())
+        {
+            Item takenItem = items.First();
+            items.RemoveAt(0);
+            UpdateInventoryDisplay();
+            return takenItem;
+        }
+        else
+            return null;
+    }
     void Awake()
     {
         items.Clear();  // Puste inventory na start
