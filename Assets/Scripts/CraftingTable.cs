@@ -15,6 +15,7 @@ public class CraftingTable : MonoBehaviour
     private Transform player;
     private PlayerMessageDisplay messageDisplay;
     private bool isInRange = false;
+    [SerializeField] private GameObject fusionMenu;
 
     void Start()
     {
@@ -44,17 +45,25 @@ public class CraftingTable : MonoBehaviour
 
         if (isInRange && Keyboard.current.eKey.wasPressedThisFrame)
         {
-            Item newItem = player.GetComponent<PlayerInventory>().GetCurrentItem();
-            if(newItem != null)
-            {
-                if (CurrentItem != null)
-                {
-                    CraftItem(CurrentItem, newItem);
-                }
-                else
-                    CurrentItem = newItem;
-            }
+            OpenFusionMenu();
+            // Item newItem = player.GetComponent<PlayerInventory>().GetCurrentItem();
+            // if(newItem != null)
+            // {
+            //     if (CurrentItem != null)
+            //     {
+            //         CraftItem(CurrentItem, newItem);
+            //     }
+            //     else
+            //         CurrentItem = newItem;
+            // }
         }
+    }
+
+    private void OpenFusionMenu()
+    {
+        fusionMenu.SetActive(true);
+        fusionMenu.GetComponent<FusionMenuController>().SetCraftingTable(player.GetComponent<PlayerInventory>());
+        
     }
 
     void OnDrawGizmosSelected()
