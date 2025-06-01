@@ -88,7 +88,7 @@ public class LampPlacementPoint : MonoBehaviour
             if (playerInventory != null && playerInventory.HasItem("Bulb") && messageDisplay != null)
             {
                 Debug.LogWarning($"[LampPlacementPoint] Player has Bulb, showing interaction prompt");
-                messageDisplay.ShowInteraction("Press E to install lamp");
+                messageDisplay.ShowPickupSprite();
             }
             else
             {
@@ -120,7 +120,7 @@ public class LampPlacementPoint : MonoBehaviour
             
             if (messageDisplay != null)
             {
-                messageDisplay.ShowMessage("Lamp installed!", Color.green, 2f);
+                messageDisplay.ShowPickupSprite();
             }
             
             // Play sound effect if available

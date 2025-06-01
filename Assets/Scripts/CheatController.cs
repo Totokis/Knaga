@@ -6,6 +6,7 @@ public class CheatController : MonoBehaviour
     private PlayerInventory playerInventory;
     private ItemSpriteManager itemSpriteManager;
     private bool yKeyWasPressed = false;
+    private bool uKeyWasPressed = false;
     
     void Start()
     {
@@ -33,6 +34,16 @@ public class CheatController : MonoBehaviour
         }
         
         yKeyWasPressed = yKeyIsPressed;
+        
+        // Check U key for Wooden Strop
+        bool uKeyIsPressed = Keyboard.current.uKey.isPressed;
+        
+        if (uKeyIsPressed && !uKeyWasPressed)
+        {
+            AddWoodenStropToInventory();
+        }
+        
+        uKeyWasPressed = uKeyIsPressed;
     }
     
     private void AddBulbToInventory()
@@ -64,12 +75,31 @@ public class CheatController : MonoBehaviour
             PlayerMessageDisplay messageDisplay = PlayerMessageDisplay.Instance;
             if (messageDisplay != null)
             {
-                messageDisplay.ShowMessage("Cheat: Added Bulb to inventory!", Color.magenta, 1.5f);
+                messageDisplay.ShowPickupSprite();
             }
         }
         else
         {
             Debug.LogError("[CheatController] Failed to add Bulb to inventory");
+        }
+    }
+    
+    private void AddWoodenStropToInventory()
+    {
+        if (playerInventory != null && itemSpriteManager != null)
+        {
+            Item strop = new Item("Wooden Strop", 1, ItemType.WoodenStrop);
+            strop.icon = itemSpriteManager.WoodenStropSprite;
+            strop.color = new Color(0.6f, 0.4f, 0.2f);
+            
+            if (playerInventory.AddItem(strop))
+            {
+                PlayerMessageDisplay messageDisplay = PlayerMessageDisplay.Instance;
+                if (messageDisplay != null)
+                {
+                    messageDisplay.ShowPickupSprite();
+                }
+            }
         }
     }
 }
