@@ -495,6 +495,7 @@ GameObject:
   - component: {fileID: 190734542}
   - component: {fileID: 190734543}
   - component: {fileID: 190734544}
+  - component: {fileID: 190734545}
   m_Layer: 0
   m_Name: OrganTnacy
   m_TagString: Untagged
@@ -509,7 +510,7 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 190734538}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -655,6 +656,26 @@ MonoBehaviour:
   addRandomShake: 1
   shakeChance: 0.025
   shakeStrength: 3
+--- !u!114 &190734545
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 190734538}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c1bd1227c8c04bd40bf1c076a6113d8e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  minRotation: -7
+  maxRotation: 7
+  rotationSpeed: 2
+  idleSpeed: 0.5
+  smoothSpeed: 3
+  addNoise: 1
+  noiseStrength: 1
+  noiseFrequency: 10
 --- !u!1 &294078966
 GameObject:
   m_ObjectHideFlags: 0
