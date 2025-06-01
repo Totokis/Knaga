@@ -60,6 +60,7 @@ public class CraftingTable : MonoBehaviour
     private void CloseFusionMenu()
     {
         fusionMenu.GetComponent<FusionMenuController>().CloseTable();
+        fusionMenu.SetActive(false);
     }
 
     private void OpenFusionMenu()
