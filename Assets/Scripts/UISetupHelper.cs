@@ -1,9 +1,7 @@
 using UnityEngine;
-using UnityEditor;
 
 public class UISetupHelper : MonoBehaviour
 {
-    [MenuItem("GameObject/UI/Setup World Space UI")]
     public static void SetupWorldSpaceUI()
     {
         // Tworzenie InventoryDisplay
