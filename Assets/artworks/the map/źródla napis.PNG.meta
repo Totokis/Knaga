@@ -1,0 +1,507 @@
+fileFormatVersion: 2
+guid: d9c16c93115faea4a97fea3c45596561
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 2944563727978002087
+    second: "\u017Ar\xF3dla napis_0"
+  - first:
+      213: 2949721544906492401
+    second: "\u017Ar\xF3dla napis_1"
+  - first:
+      213: 3462246264302485164
+    second: "\u017Ar\xF3dla napis_2"
+  - first:
+      213: -1031944098577558414
+    second: "\u017Ar\xF3dla napis_3"
+  - first:
+      213: 2620902849046331479
+    second: "\u017Ar\xF3dla napis_4"
+  - first:
+      213: -1032543708454338117
+    second: "\u017Ar\xF3dla napis_5"
+  - first:
+      213: -5805322187678269603
+    second: "\u017Ar\xF3dla napis_6"
+  - first:
+      213: 5668484273459156364
+    second: "\u017Ar\xF3dla napis_7"
+  - first:
+      213: -2435521778361719911
+    second: "\u017Ar\xF3dla napis_8"
+  - first:
+      213: -2374989756968594528
+    second: "\u017Ar\xF3dla napis_9"
+  - first:
+      213: -7792426326782384894
+    second: "\u017Ar\xF3dla napis_10"
+  - first:
+      213: -8357896242618717433
+    second: "\u017Ar\xF3dla napis_11"
+  - first:
+      213: 5804755201858132404
+    second: "\u017Ar\xF3dla napis_12"
+  - first:
+      213: 7818747618614045788
+    second: "\u017Ar\xF3dla napis_13"
+  - first:
+      213: 5041816889211711987
+    second: "\u017Ar\xF3dla napis_14"
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: "\u017Ar\xF3dla napis_0"
+      rect:
+        serializedVersion: 2
+        x: 843
+        y: 1118
+        width: 103
+        height: 66
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7a6f0a01c113dd820800000000000000
+      internalID: 2944563727978002087
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\u017Ar\xF3dla napis_1"
+      rect:
+        serializedVersion: 2
+        x: 770
+        y: 1097
+        width: 14
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1f9c776ed148fe820800000000000000
+      internalID: 2949721544906492401
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\u017Ar\xF3dla napis_2"
+      rect:
+        serializedVersion: 2
+        x: 929
+        y: 1095
+        width: 9
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cae3ca432ae5c0030800000000000000
+      internalID: 3462246264302485164
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\u017Ar\xF3dla napis_3"
+      rect:
+        serializedVersion: 2
+        x: 856
+        y: 1087
+        width: 6
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 27459305f4ccda1f0800000000000000
+      internalID: -1031944098577558414
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\u017Ar\xF3dla napis_4"
+      rect:
+        serializedVersion: 2
+        x: 1164
+        y: 658
+        width: 423
+        height: 432
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 750473c41415f5420800000000000000
+      internalID: 2620902849046331479
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\u017Ar\xF3dla napis_5"
+      rect:
+        serializedVersion: 2
+        x: 488
+        y: 711
+        width: 407
+        height: 357
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bb1c382c7faaba1f0800000000000000
+      internalID: -1032543708454338117
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\u017Ar\xF3dla napis_6"
+      rect:
+        serializedVersion: 2
+        x: 545
+        y: 1061
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d5f3ebc6a3a5f6fa0800000000000000
+      internalID: -5805322187678269603
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\u017Ar\xF3dla napis_7"
+      rect:
+        serializedVersion: 2
+        x: 927
+        y: 1066
+        width: 10
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c85db6ee9608aae40800000000000000
+      internalID: 5668484273459156364
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\u017Ar\xF3dla napis_8"
+      rect:
+        serializedVersion: 2
+        x: 1409
+        y: 701
+        width: 479
+        height: 385
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 993a506b8d9433ed0800000000000000
+      internalID: -2435521778361719911
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\u017Ar\xF3dla napis_9"
+      rect:
+        serializedVersion: 2
+        x: 836
+        y: 723
+        width: 252
+        height: 271
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0a312b636675a0fd0800000000000000
+      internalID: -2374989756968594528
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\u017Ar\xF3dla napis_10"
+      rect:
+        serializedVersion: 2
+        x: 1020
+        y: 774
+        width: 202
+        height: 195
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 205ebb5ba8dbbd390800000000000000
+      internalID: -7792426326782384894
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\u017Ar\xF3dla napis_11"
+      rect:
+        serializedVersion: 2
+        x: 532
+        y: 688
+        width: 9
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 70ba32d36a9c20c80800000000000000
+      internalID: -8357896242618717433
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\u017Ar\xF3dla napis_12"
+      rect:
+        serializedVersion: 2
+        x: 776
+        y: 696
+        width: 13
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4b9dad6e912ae8050800000000000000
+      internalID: 5804755201858132404
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\u017Ar\xF3dla napis_13"
+      rect:
+        serializedVersion: 2
+        x: 794
+        y: 695
+        width: 10
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c5cebeb9885c18c60800000000000000
+      internalID: 7818747618614045788
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\u017Ar\xF3dla napis_14"
+      rect:
+        serializedVersion: 2
+        x: 1275
+        y: 645
+        width: 7
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3f177008fb128f540800000000000000
+      internalID: 5041816889211711987
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      "\u017Ar\xF3dla napis_0": 2944563727978002087
+      "\u017Ar\xF3dla napis_1": 2949721544906492401
+      "\u017Ar\xF3dla napis_10": -7792426326782384894
+      "\u017Ar\xF3dla napis_11": -8357896242618717433
+      "\u017Ar\xF3dla napis_12": 5804755201858132404
+      "\u017Ar\xF3dla napis_13": 7818747618614045788
+      "\u017Ar\xF3dla napis_14": 5041816889211711987
+      "\u017Ar\xF3dla napis_2": 3462246264302485164
+      "\u017Ar\xF3dla napis_3": -1031944098577558414
+      "\u017Ar\xF3dla napis_4": 2620902849046331479
+      "\u017Ar\xF3dla napis_5": -1032543708454338117
+      "\u017Ar\xF3dla napis_6": -5805322187678269603
+      "\u017Ar\xF3dla napis_7": 5668484273459156364
+      "\u017Ar\xF3dla napis_8": -2435521778361719911
+      "\u017Ar\xF3dla napis_9": -2374989756968594528
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
