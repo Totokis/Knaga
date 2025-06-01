@@ -15,6 +15,10 @@ public class CraftingTable : MonoBehaviour
     private Transform player;
     private PlayerMessageDisplay messageDisplay;
     private bool isInRange = false;
+    [SerializeField] private GameObject fusionMenu;
+
+    [Header("Item Sprites")]
+    public Sprite metalSprite;
 
     void Start()
     {
@@ -44,17 +48,25 @@ public class CraftingTable : MonoBehaviour
 
         if (isInRange && Keyboard.current.eKey.wasPressedThisFrame)
         {
-            Item newItem = player.GetComponent<PlayerInventory>().GetCurrentItem();
-            if(newItem != null)
-            {
-                if (CurrentItem != null)
-                {
-                    CraftItem(CurrentItem, newItem);
-                }
-                else
-                    CurrentItem = newItem;
-            }
+            OpenFusionMenu();
         }
+
+        if (Keyboard.current.escapeKey.wasPressedThisFrame)
+        {
+            CloseFusionMenu();
+        }
+    }
+
+    private void CloseFusionMenu()
+    {
+        fusionMenu.GetComponent<FusionMenuController>().CloseTable();
+    }
+
+    private void OpenFusionMenu()
+    {
+        fusionMenu.SetActive(true);
+        fusionMenu.GetComponent<FusionMenuController>().SetCraftingTable(player.GetComponent<PlayerInventory>());
+        
     }
 
     void OnDrawGizmosSelected()
@@ -81,6 +93,7 @@ public class CraftingTable : MonoBehaviour
             {
                 itemName = "Metal",
                 itemType = ItemType.Metal,
+                icon = metalSprite,
                 amount = 1
             };
         }
@@ -137,19 +150,20 @@ public class CraftingTable : MonoBehaviour
     void DropItem(Item item)
     {
         GameObject obj = new GameObject("ItemFromCrafting");
-        obj.transform.position = transform.position + Vector3.right * 2 + Vector3.down * 2.5f; // drobny random na boki?
+        obj.transform.position = transform.position + Vector3.right * 2 + Vector3.down * (-3f); // drobny random na boki?
 
         SpriteRenderer sr = obj.AddComponent<SpriteRenderer>();
         // sr.color = color;
         sr.sortingOrder = 1;
         obj.transform.localScale = Vector3.one * 0.6f;
 
-        Sprite sprite = FindObjectOfType<ItemSpriteManager>().GetSpriteByItemType(item.itemType);
+        Sprite sprite = FindAnyObjectByType<ItemSpriteManager>().GetSpriteByItemType(item.itemType);
 
         obj.GetComponent<SpriteRenderer>().sprite = sprite;
 
         ItemPickup pickup = obj.AddComponent<ItemPickup>();
         pickup.itemData = item;
+        pickup.itemData.icon = item.icon;
         // pickup.itemData.color = color;
     }
 }

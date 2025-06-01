@@ -1,0 +1,949 @@
+fileFormatVersion: 2
+guid: 34fd4609a451bef429695a6fa08025fc
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -5414453859027657705
+    second: O autorach napis_0
+  - first:
+      213: 2962780935705453539
+    second: O autorach napis_1
+  - first:
+      213: 4310450846222100089
+    second: O autorach napis_2
+  - first:
+      213: 4903079638301072870
+    second: O autorach napis_3
+  - first:
+      213: -472380504016635304
+    second: O autorach napis_4
+  - first:
+      213: 2606357526793050720
+    second: O autorach napis_5
+  - first:
+      213: -8713046639189317327
+    second: O autorach napis_6
+  - first:
+      213: 1695318698647451802
+    second: O autorach napis_7
+  - first:
+      213: 5166678416929133501
+    second: O autorach napis_8
+  - first:
+      213: -987974096984413761
+    second: O autorach napis_9
+  - first:
+      213: 3614472766598897157
+    second: O autorach napis_10
+  - first:
+      213: -5894312258174425719
+    second: O autorach napis_11
+  - first:
+      213: -8389049388961990561
+    second: O autorach napis_12
+  - first:
+      213: -1292752203271915710
+    second: O autorach napis_13
+  - first:
+      213: -5292524331085389932
+    second: O autorach napis_14
+  - first:
+      213: 2719482614729959001
+    second: O autorach napis_15
+  - first:
+      213: 1301790061901368406
+    second: O autorach napis_16
+  - first:
+      213: -6609287161030816827
+    second: O autorach napis_17
+  - first:
+      213: 4040725411849946467
+    second: O autorach napis_18
+  - first:
+      213: 584737066867280400
+    second: O autorach napis_19
+  - first:
+      213: -867863054181038249
+    second: O autorach napis_20
+  - first:
+      213: 7177455744479184786
+    second: O autorach napis_21
+  - first:
+      213: -4856894112204123159
+    second: O autorach napis_22
+  - first:
+      213: -3263080863047154144
+    second: O autorach napis_23
+  - first:
+      213: -4302410571905427036
+    second: O autorach napis_24
+  - first:
+      213: 115107734491938517
+    second: O autorach napis_25
+  - first:
+      213: -1855904224101723630
+    second: O autorach napis_26
+  - first:
+      213: 2123818923722652345
+    second: O autorach napis_27
+  - first:
+      213: -3197827492796526643
+    second: O autorach napis_28
+  - first:
+      213: 2509470081482124563
+    second: O autorach napis_29
+  - first:
+      213: 2301757342807640045
+    second: O autorach napis_30
+  - first:
+      213: 7101866125663421196
+    second: O autorach napis_31
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: O autorach napis_0
+      rect:
+        serializedVersion: 2
+        x: 115
+        y: 685
+        width: 455
+        height: 427
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 71cd9e7f6eefbd4b0800000000000000
+      internalID: -5414453859027657705
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: O autorach napis_1
+      rect:
+        serializedVersion: 2
+        x: 518
+        y: 1104
+        width: 11
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3e3e5044099ed1920800000000000000
+      internalID: 2962780935705453539
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: O autorach napis_2
+      rect:
+        serializedVersion: 2
+        x: 1864
+        y: 719
+        width: 456
+        height: 385
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 976a9d6f43cc1db30800000000000000
+      internalID: 4310450846222100089
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: O autorach napis_3
+      rect:
+        serializedVersion: 2
+        x: 543
+        y: 1052
+        width: 11
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6edd26214fc3b0440800000000000000
+      internalID: 4903079638301072870
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: O autorach napis_4
+      rect:
+        serializedVersion: 2
+        x: 557
+        y: 1054
+        width: 8
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 85ab4433f64c179f0800000000000000
+      internalID: -472380504016635304
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: O autorach napis_5
+      rect:
+        serializedVersion: 2
+        x: 878
+        y: 675
+        width: 492
+        height: 388
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 06a5a2e8c54ab2420800000000000000
+      internalID: 2606357526793050720
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: O autorach napis_6
+      rect:
+        serializedVersion: 2
+        x: 600
+        y: 1030
+        width: 8
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 139a5bfce3a051780800000000000000
+      internalID: -8713046639189317327
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: O autorach napis_7
+      rect:
+        serializedVersion: 2
+        x: 577
+        y: 980
+        width: 14
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a9875fdcf5bf68710800000000000000
+      internalID: 1695318698647451802
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: O autorach napis_8
+      rect:
+        serializedVersion: 2
+        x: 1436
+        y: 711
+        width: 251
+        height: 283
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: db31dbd55aab3b740800000000000000
+      internalID: 5166678416929133501
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: O autorach napis_9
+      rect:
+        serializedVersion: 2
+        x: 1860
+        y: 985
+        width: 7
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fb9e4f51bc20a42f0800000000000000
+      internalID: -987974096984413761
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: O autorach napis_10
+      rect:
+        serializedVersion: 2
+        x: 603
+        y: 965
+        width: 15
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 50e5377b4df292230800000000000000
+      internalID: 3614472766598897157
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: O autorach napis_11
+      rect:
+        serializedVersion: 2
+        x: 835
+        y: 975
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 98568480b32333ea0800000000000000
+      internalID: -5894312258174425719
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: O autorach napis_12
+      rect:
+        serializedVersion: 2
+        x: 847
+        y: 970
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f5876bf170c149b80800000000000000
+      internalID: -8389049388961990561
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: O autorach napis_13
+      rect:
+        serializedVersion: 2
+        x: 1795
+        y: 975
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 247bf5d68b83f0ee0800000000000000
+      internalID: -1292752203271915710
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: O autorach napis_14
+      rect:
+        serializedVersion: 2
+        x: 1807
+        y: 970
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 49f1b80792d2d86b0800000000000000
+      internalID: -5292524331085389932
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: O autorach napis_15
+      rect:
+        serializedVersion: 2
+        x: 541
+        y: 921
+        width: 14
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 95664d7970b8db520800000000000000
+      internalID: 2719482614729959001
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: O autorach napis_16
+      rect:
+        serializedVersion: 2
+        x: 645
+        y: 743
+        width: 286
+        height: 221
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 65cc3c30a23e01210800000000000000
+      internalID: 1301790061901368406
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: O autorach napis_17
+      rect:
+        serializedVersion: 2
+        x: 1261
+        y: 774
+        width: 202
+        height: 195
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5cb453438581744a0800000000000000
+      internalID: -6609287161030816827
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: O autorach napis_18
+      rect:
+        serializedVersion: 2
+        x: 1605
+        y: 743
+        width: 286
+        height: 221
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 365c5387a5a831830800000000000000
+      internalID: 4040725411849946467
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: O autorach napis_19
+      rect:
+        serializedVersion: 2
+        x: 557
+        y: 894
+        width: 13
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 01ac0a5a3476d1800800000000000000
+      internalID: 584737066867280400
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: O autorach napis_20
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 830
+        width: 10
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7578add762bb4f3f0800000000000000
+      internalID: -867863054181038249
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: O autorach napis_21
+      rect:
+        serializedVersion: 2
+        x: 89
+        y: 792
+        width: 11
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 297c4c8c8f17b9360800000000000000
+      internalID: 7177455744479184786
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: O autorach napis_22
+      rect:
+        serializedVersion: 2
+        x: 634
+        y: 805
+        width: 7
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9e31362b988d89cb0800000000000000
+      internalID: -4856894112204123159
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: O autorach napis_23
+      rect:
+        serializedVersion: 2
+        x: 546
+        y: 792
+        width: 7
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 02603bc5e3537b2d0800000000000000
+      internalID: -3263080863047154144
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: O autorach napis_24
+      rect:
+        serializedVersion: 2
+        x: 115
+        y: 758
+        width: 10
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4a911b74164ca44c0800000000000000
+      internalID: -4302410571905427036
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: O autorach napis_25
+      rect:
+        serializedVersion: 2
+        x: 1431
+        y: 761
+        width: 9
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5deba49efd1f89100800000000000000
+      internalID: 115107734491938517
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: O autorach napis_26
+      rect:
+        serializedVersion: 2
+        x: 1424
+        y: 748
+        width: 8
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2121541f0f08e36e0800000000000000
+      internalID: -1855904224101723630
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: O autorach napis_27
+      rect:
+        serializedVersion: 2
+        x: 597
+        y: 724
+        width: 8
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9babdb30f02597d10800000000000000
+      internalID: 2123818923722652345
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: O autorach napis_28
+      rect:
+        serializedVersion: 2
+        x: 655
+        y: 730
+        width: 8
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dcf82ee86d80f93d0800000000000000
+      internalID: -3197827492796526643
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: O autorach napis_29
+      rect:
+        serializedVersion: 2
+        x: 798
+        y: 732
+        width: 10
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 31d663d4ebd63d220800000000000000
+      internalID: 2509470081482124563
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: O autorach napis_30
+      rect:
+        serializedVersion: 2
+        x: 1758
+        y: 732
+        width: 10
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: de74239ab1c71ff10800000000000000
+      internalID: 2301757342807640045
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: O autorach napis_31
+      rect:
+        serializedVersion: 2
+        x: 1884
+        y: 711
+        width: 8
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c034c8e2d95ee8260800000000000000
+      internalID: 7101866125663421196
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      O autorach napis_0: -5414453859027657705
+      O autorach napis_1: 2962780935705453539
+      O autorach napis_10: 3614472766598897157
+      O autorach napis_11: -5894312258174425719
+      O autorach napis_12: -8389049388961990561
+      O autorach napis_13: -1292752203271915710
+      O autorach napis_14: -5292524331085389932
+      O autorach napis_15: 2719482614729959001
+      O autorach napis_16: 1301790061901368406
+      O autorach napis_17: -6609287161030816827
+      O autorach napis_18: 4040725411849946467
+      O autorach napis_19: 584737066867280400
+      O autorach napis_2: 4310450846222100089
+      O autorach napis_20: -867863054181038249
+      O autorach napis_21: 7177455744479184786
+      O autorach napis_22: -4856894112204123159
+      O autorach napis_23: -3263080863047154144
+      O autorach napis_24: -4302410571905427036
+      O autorach napis_25: 115107734491938517
+      O autorach napis_26: -1855904224101723630
+      O autorach napis_27: 2123818923722652345
+      O autorach napis_28: -3197827492796526643
+      O autorach napis_29: 2509470081482124563
+      O autorach napis_3: 4903079638301072870
+      O autorach napis_30: 2301757342807640045
+      O autorach napis_31: 7101866125663421196
+      O autorach napis_4: -472380504016635304
+      O autorach napis_5: 2606357526793050720
+      O autorach napis_6: -8713046639189317327
+      O autorach napis_7: 1695318698647451802
+      O autorach napis_8: 5166678416929133501
+      O autorach napis_9: -987974096984413761
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

@@ -1,0 +1,1287 @@
+fileFormatVersion: 2
+guid: 9ac06e570829fc74683d2ee6909394bf
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 5018179044002685712
+    second: Ustawienia napis_0
+  - first:
+      213: 7941779205190762537
+    second: Ustawienia napis_1
+  - first:
+      213: -8148944849810013612
+    second: Ustawienia napis_2
+  - first:
+      213: -6120880405923084913
+    second: Ustawienia napis_3
+  - first:
+      213: 4580431459538493109
+    second: Ustawienia napis_4
+  - first:
+      213: 3834140978523531159
+    second: Ustawienia napis_5
+  - first:
+      213: 137792948214605762
+    second: Ustawienia napis_6
+  - first:
+      213: 268641963794039739
+    second: Ustawienia napis_7
+  - first:
+      213: 4562500818076637379
+    second: Ustawienia napis_8
+  - first:
+      213: -789458301680010573
+    second: Ustawienia napis_9
+  - first:
+      213: 7937851723071824509
+    second: Ustawienia napis_10
+  - first:
+      213: -8132906379305941734
+    second: Ustawienia napis_11
+  - first:
+      213: -4598483295822851091
+    second: Ustawienia napis_12
+  - first:
+      213: -1594786835462122709
+    second: Ustawienia napis_13
+  - first:
+      213: -1010934795677856175
+    second: Ustawienia napis_14
+  - first:
+      213: -8680968598370194879
+    second: Ustawienia napis_15
+  - first:
+      213: 317513269644545503
+    second: Ustawienia napis_16
+  - first:
+      213: -345011315375349430
+    second: Ustawienia napis_17
+  - first:
+      213: 3903640081994511778
+    second: Ustawienia napis_18
+  - first:
+      213: 5028773852397343438
+    second: Ustawienia napis_19
+  - first:
+      213: 3838553305813224994
+    second: Ustawienia napis_20
+  - first:
+      213: 4311136443329934899
+    second: Ustawienia napis_21
+  - first:
+      213: -8333000887602884259
+    second: Ustawienia napis_22
+  - first:
+      213: -1612204847372667322
+    second: Ustawienia napis_23
+  - first:
+      213: -4211917924682829115
+    second: Ustawienia napis_24
+  - first:
+      213: 2779866232045221875
+    second: Ustawienia napis_25
+  - first:
+      213: -5179498091394057660
+    second: Ustawienia napis_26
+  - first:
+      213: 7289786009189415558
+    second: Ustawienia napis_27
+  - first:
+      213: 8973491967591614515
+    second: Ustawienia napis_28
+  - first:
+      213: -1177919400987728795
+    second: Ustawienia napis_29
+  - first:
+      213: 4120914738809654185
+    second: Ustawienia napis_30
+  - first:
+      213: -1532155843285191531
+    second: Ustawienia napis_31
+  - first:
+      213: -241725178300725904
+    second: Ustawienia napis_32
+  - first:
+      213: -518497260436938083
+    second: Ustawienia napis_33
+  - first:
+      213: -2009995807099176734
+    second: Ustawienia napis_34
+  - first:
+      213: 7952070342611493691
+    second: Ustawienia napis_35
+  - first:
+      213: 4206362154188058330
+    second: Ustawienia napis_36
+  - first:
+      213: -778138469460680752
+    second: Ustawienia napis_37
+  - first:
+      213: 1116743937670906678
+    second: Ustawienia napis_38
+  - first:
+      213: -7393856337966432379
+    second: Ustawienia napis_39
+  - first:
+      213: 8105139397907483283
+    second: Ustawienia napis_40
+  - first:
+      213: -7544971996717960186
+    second: Ustawienia napis_41
+  - first:
+      213: -3155926171528037746
+    second: Ustawienia napis_42
+  - first:
+      213: -431856839478493988
+    second: Ustawienia napis_43
+  - first:
+      213: -1493872566266506073
+    second: Ustawienia napis_44
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Ustawienia napis_0
+      rect:
+        serializedVersion: 2
+        x: 167
+        y: 662
+        width: 407
+        height: 422
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 013e619c04724a540800000000000000
+      internalID: 5018179044002685712
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ustawienia napis_1
+      rect:
+        serializedVersion: 2
+        x: 359
+        y: 1080
+        width: 10
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 920caf91c1ed63e60800000000000000
+      internalID: 7941779205190762537
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ustawienia napis_2
+      rect:
+        serializedVersion: 2
+        x: 457
+        y: 675
+        width: 467
+        height: 388
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 45243d485d129ee80800000000000000
+      internalID: -8148944849810013612
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ustawienia napis_3
+      rect:
+        serializedVersion: 2
+        x: 1052
+        y: 985
+        width: 7
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f854e4c53b34e0ba0800000000000000
+      internalID: -6120880405923084913
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ustawienia napis_4
+      rect:
+        serializedVersion: 2
+        x: 1465
+        y: 958
+        width: 48
+        height: 43
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5bed0dfe426f09f30800000000000000
+      internalID: 4580431459538493109
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ustawienia napis_5
+      rect:
+        serializedVersion: 2
+        x: 1518
+        y: 993
+        width: 7
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 797e9a3e7ea953530800000000000000
+      internalID: 3834140978523531159
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ustawienia napis_6
+      rect:
+        serializedVersion: 2
+        x: 1598
+        y: 737
+        width: 243
+        height: 267
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2c7a2e2d4f989e100800000000000000
+      internalID: 137792948214605762
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ustawienia napis_7
+      rect:
+        serializedVersion: 2
+        x: 1970
+        y: 958
+        width: 48
+        height: 43
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bb305b751786ab300800000000000000
+      internalID: 268641963794039739
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ustawienia napis_8
+      rect:
+        serializedVersion: 2
+        x: 2023
+        y: 993
+        width: 7
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3c813e42252415f30800000000000000
+      internalID: 4562500818076637379
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ustawienia napis_9
+      rect:
+        serializedVersion: 2
+        x: 2185
+        y: 985
+        width: 7
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3ba316b7bd74b05f0800000000000000
+      internalID: -789458301680010573
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ustawienia napis_10
+      rect:
+        serializedVersion: 2
+        x: 987
+        y: 975
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d722b69e51ae82e60800000000000000
+      internalID: 7937851723071824509
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ustawienia napis_11
+      rect:
+        serializedVersion: 2
+        x: 999
+        y: 970
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a1506fdecbc122f80800000000000000
+      internalID: -8132906379305941734
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ustawienia napis_12
+      rect:
+        serializedVersion: 2
+        x: 1460
+        y: 976
+        width: 6
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: de359e66ec7ee20c0800000000000000
+      internalID: -4598483295822851091
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ustawienia napis_13
+      rect:
+        serializedVersion: 2
+        x: 1965
+        y: 976
+        width: 6
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b239fcb92dd2ed9e0800000000000000
+      internalID: -1594786835462122709
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ustawienia napis_14
+      rect:
+        serializedVersion: 2
+        x: 2120
+        y: 975
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 15e0a84d82078f1f0800000000000000
+      internalID: -1010934795677856175
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ustawienia napis_15
+      rect:
+        serializedVersion: 2
+        x: 2132
+        y: 970
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 14ae2d3bd01078780800000000000000
+      internalID: -8680968598370194879
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ustawienia napis_16
+      rect:
+        serializedVersion: 2
+        x: 150
+        y: 885
+        width: 8
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fddc2a0f2a8086400800000000000000
+      internalID: 317513269644545503
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ustawienia napis_17
+      rect:
+        serializedVersion: 2
+        x: 797
+        y: 743
+        width: 286
+        height: 221
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a41ef8f5906463bf0800000000000000
+      internalID: -345011315375349430
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ustawienia napis_18
+      rect:
+        serializedVersion: 2
+        x: 1025
+        y: 712
+        width: 324
+        height: 248
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2a57242e8f38c2630800000000000000
+      internalID: 3903640081994511778
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ustawienia napis_19
+      rect:
+        serializedVersion: 2
+        x: 1341
+        y: 741
+        width: 127
+        height: 203
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ec29ae7dc2bc9c540800000000000000
+      internalID: 5028773852397343438
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ustawienia napis_20
+      rect:
+        serializedVersion: 2
+        x: 1424
+        y: 753
+        width: 206
+        height: 221
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 22e0664e4e7454530800000000000000
+      internalID: 3838553305813224994
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ustawienia napis_21
+      rect:
+        serializedVersion: 2
+        x: 1840
+        y: 741
+        width: 133
+        height: 203
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 336fbeaf0cb34db30800000000000000
+      internalID: 4311136443329934899
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ustawienia napis_22
+      rect:
+        serializedVersion: 2
+        x: 1930
+        y: 743
+        width: 286
+        height: 221
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d515a65c7db3b5c80800000000000000
+      internalID: -8333000887602884259
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ustawienia napis_23
+      rect:
+        serializedVersion: 2
+        x: 146
+        y: 841
+        width: 11
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 646703fab3c40a9e0800000000000000
+      internalID: -1612204847372667322
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ustawienia napis_24
+      rect:
+        serializedVersion: 2
+        x: 146
+        y: 821
+        width: 12
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5c2fd2496f24c85c0800000000000000
+      internalID: -4211917924682829115
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ustawienia napis_25
+      rect:
+        serializedVersion: 2
+        x: 130
+        y: 808
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3f7b8241c91149620800000000000000
+      internalID: 2779866232045221875
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ustawienia napis_26
+      rect:
+        serializedVersion: 2
+        x: 165
+        y: 802
+        width: 8
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 44ab4a39de9be18b0800000000000000
+      internalID: -5179498091394057660
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ustawienia napis_27
+      rect:
+        serializedVersion: 2
+        x: 156
+        y: 745
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 68af85e90c58a2560800000000000000
+      internalID: 7289786009189415558
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ustawienia napis_28
+      rect:
+        serializedVersion: 2
+        x: 950
+        y: 732
+        width: 10
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3388e13a66f388c70800000000000000
+      internalID: 8973491967591614515
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ustawienia napis_29
+      rect:
+        serializedVersion: 2
+        x: 1583
+        y: 734
+        width: 7
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 564e512bb8037afe0800000000000000
+      internalID: -1177919400987728795
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ustawienia napis_30
+      rect:
+        serializedVersion: 2
+        x: 1649
+        y: 736
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9abcb641f1e603930800000000000000
+      internalID: 4120914738809654185
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ustawienia napis_31
+      rect:
+        serializedVersion: 2
+        x: 1940
+        y: 730
+        width: 8
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5947274d060bcbae0800000000000000
+      internalID: -1532155843285191531
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ustawienia napis_32
+      rect:
+        serializedVersion: 2
+        x: 2083
+        y: 732
+        width: 10
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0750e162b3835acf0800000000000000
+      internalID: -241725178300725904
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ustawienia napis_33
+      rect:
+        serializedVersion: 2
+        x: 1882
+        y: 724
+        width: 8
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d92a4ae1d7dedc8f0800000000000000
+      internalID: -518497260436938083
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ustawienia napis_34
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 713
+        width: 8
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2e834dd767f0b14e0800000000000000
+      internalID: -2009995807099176734
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ustawienia napis_35
+      rect:
+        serializedVersion: 2
+        x: 153
+        y: 692
+        width: 10
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b33e64048dd6b5e60800000000000000
+      internalID: 7952070342611493691
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ustawienia napis_36
+      rect:
+        serializedVersion: 2
+        x: 133
+        y: 655
+        width: 11
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: adea60dc710006a30800000000000000
+      internalID: 4206362154188058330
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ustawienia napis_37
+      rect:
+        serializedVersion: 2
+        x: 175
+        y: 649
+        width: 10
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0dfdabd4f2f7335f0800000000000000
+      internalID: -778138469460680752
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ustawienia napis_38
+      rect:
+        serializedVersion: 2
+        x: 486
+        y: 651
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 63302fdc1b87f7f00800000000000000
+      internalID: 1116743937670906678
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ustawienia napis_39
+      rect:
+        serializedVersion: 2
+        x: 180
+        y: 639
+        width: 8
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 58f7d3fb5deb36990800000000000000
+      internalID: -7393856337966432379
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ustawienia napis_40
+      rect:
+        serializedVersion: 2
+        x: 261
+        y: 632
+        width: 11
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 39a8c4be65d3b7070800000000000000
+      internalID: 8105139397907483283
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ustawienia napis_41
+      rect:
+        serializedVersion: 2
+        x: 262
+        y: 641
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6043b57a1ffda4790800000000000000
+      internalID: -7544971996717960186
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ustawienia napis_42
+      rect:
+        serializedVersion: 2
+        x: 150
+        y: 625
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e8a76b82ed5e334d0800000000000000
+      internalID: -3155926171528037746
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ustawienia napis_43
+      rect:
+        serializedVersion: 2
+        x: 195
+        y: 620
+        width: 7
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cdcbf091e7cb10af0800000000000000
+      internalID: -431856839478493988
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ustawienia napis_44
+      rect:
+        serializedVersion: 2
+        x: 491
+        y: 626
+        width: 11
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7a4dbfbd0d2b44be0800000000000000
+      internalID: -1493872566266506073
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      Ustawienia napis_0: 5018179044002685712
+      Ustawienia napis_1: 7941779205190762537
+      Ustawienia napis_10: 7937851723071824509
+      Ustawienia napis_11: -8132906379305941734
+      Ustawienia napis_12: -4598483295822851091
+      Ustawienia napis_13: -1594786835462122709
+      Ustawienia napis_14: -1010934795677856175
+      Ustawienia napis_15: -8680968598370194879
+      Ustawienia napis_16: 317513269644545503
+      Ustawienia napis_17: -345011315375349430
+      Ustawienia napis_18: 3903640081994511778
+      Ustawienia napis_19: 5028773852397343438
+      Ustawienia napis_2: -8148944849810013612
+      Ustawienia napis_20: 3838553305813224994
+      Ustawienia napis_21: 4311136443329934899
+      Ustawienia napis_22: -8333000887602884259
+      Ustawienia napis_23: -1612204847372667322
+      Ustawienia napis_24: -4211917924682829115
+      Ustawienia napis_25: 2779866232045221875
+      Ustawienia napis_26: -5179498091394057660
+      Ustawienia napis_27: 7289786009189415558
+      Ustawienia napis_28: 8973491967591614515
+      Ustawienia napis_29: -1177919400987728795
+      Ustawienia napis_3: -6120880405923084913
+      Ustawienia napis_30: 4120914738809654185
+      Ustawienia napis_31: -1532155843285191531
+      Ustawienia napis_32: -241725178300725904
+      Ustawienia napis_33: -518497260436938083
+      Ustawienia napis_34: -2009995807099176734
+      Ustawienia napis_35: 7952070342611493691
+      Ustawienia napis_36: 4206362154188058330
+      Ustawienia napis_37: -778138469460680752
+      Ustawienia napis_38: 1116743937670906678
+      Ustawienia napis_39: -7393856337966432379
+      Ustawienia napis_4: 4580431459538493109
+      Ustawienia napis_40: 8105139397907483283
+      Ustawienia napis_41: -7544971996717960186
+      Ustawienia napis_42: -3155926171528037746
+      Ustawienia napis_43: -431856839478493988
+      Ustawienia napis_44: -1493872566266506073
+      Ustawienia napis_5: 3834140978523531159
+      Ustawienia napis_6: 137792948214605762
+      Ustawienia napis_7: 268641963794039739
+      Ustawienia napis_8: 4562500818076637379
+      Ustawienia napis_9: -789458301680010573
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
