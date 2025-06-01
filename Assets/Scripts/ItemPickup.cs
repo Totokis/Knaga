@@ -43,39 +43,6 @@ public class ItemPickup : MonoBehaviour
             spriteRenderer.sprite = itemData.icon;
             Debug.Log($"Using itemData.icon for {itemData.itemName}: {itemData.icon.name}");
         }
-        else
-        {
-            // Fallback - ładuj whitesquare tylko jeśli nie ma ikony w itemData
-            Sprite whiteSquare = Resources.Load<Sprite>("whitesquare");
-            if (whiteSquare == null)
-            {
-                // Try to load from assets
-#if UNITY_EDITOR
-                UnityEngine.Object[] sprites = UnityEditor.AssetDatabase.LoadAllAssetsAtPath("Assets/Sprites/whitesquare.png");
-                if (sprites.Length > 0)
-                {
-                    foreach (var s in sprites)
-                    {
-                        if (s is Sprite)
-                        {
-                            whiteSquare = s as Sprite;
-                            break;
-                        }
-                    }
-                }
-#endif
-            }
-
-            if (whiteSquare != null)
-            {
-                spriteRenderer.sprite = whiteSquare;
-                Debug.LogWarning($"Using fallback whitesquare sprite for {itemData.itemName}");
-            }
-            else
-            {
-                Debug.LogError($"No sprite found for {itemData.itemName}! Neither itemData.icon nor whitesquare fallback available.");
-            }
-        }
 
         if (itemData.icon == null)
         {
