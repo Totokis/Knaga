@@ -11,7 +11,7 @@ public class LampPlacementPoint : MonoBehaviour
     [Header("Visual Settings")]
     [SerializeField] private float emptyPlaceholderAlpha = 0.5f;
     [SerializeField] private float installedAlpha = 1f;
-    
+
     [Header("References")]
     private GameObject lampObject;
     private SpriteRenderer spriteRenderer;
@@ -37,7 +37,7 @@ public class LampPlacementPoint : MonoBehaviour
         
         playerInventory = player?.GetComponent<PlayerInventory>();
         messageDisplay = PlayerMessageDisplay.Instance;
-        
+
         // Find components
         spriteRenderer = GetComponent<SpriteRenderer>();
         if (spriteRenderer == null)
@@ -80,7 +80,8 @@ public class LampPlacementPoint : MonoBehaviour
         // Debug distance check
         if (!hasLampInstalled && horizontalDistance <= interactionDistance * 2)
         {
-            Debug.LogWarning($"[LampPlacementPoint] {gameObject.name} - Player horizontal distance: {horizontalDistance:F2}, In range: {playerInRange}");
+            Debug.LogWarning($"[LampPlacementPoint] {gameObject.name} - " +
+                $"Player horizontal distance: {horizontalDistance:F2}, In range: {playerInRange}");
         }
 
         // Handle showing/hiding interaction prompt
@@ -91,6 +92,7 @@ public class LampPlacementPoint : MonoBehaviour
             if (playerInventory != null && playerInventory.HasItem("Bulb") && messageDisplay != null)
             {
                 Debug.LogWarning($"[LampPlacementPoint] Player has Bulb, showing interaction prompt");
+
                 messageDisplay.ShowSprite(lampSprite);
             }
             else

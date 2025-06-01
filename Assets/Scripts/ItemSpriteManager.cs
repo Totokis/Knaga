@@ -6,6 +6,7 @@ public class ItemSpriteManager : MonoBehaviour
     public Sprite MetalStropSprite;
     public Sprite TorchSprite;
     public Sprite BulbSprite;
+    public Sprite Bulbitemsprite;
     public Sprite TracksSprite;
 
     public Sprite CoalSprite;

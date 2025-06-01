@@ -6,7 +6,7 @@ public class PlayerMessageDisplay : MonoBehaviour
     [Header("Sprite Settings")]
     public float spriteHeight = 1.5f; // Wysokość nad graczem
     public float spriteDuration = 3f; // Czas wyświetlania
-    public float fadeSpeed = 0.5f;
+    public float fadeSpeed = 2f;
     public float spriteSize = 1f;
 
     [Header("Sprites")]
