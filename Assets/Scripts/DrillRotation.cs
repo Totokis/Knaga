@@ -17,6 +17,9 @@ public class DrillRotation : MonoBehaviour
     public Transform sparkSpawnPoint; // where to spawn sparks
     public float sparkInterval = 0.1f; // how often to spawn sparks
     
+    [Header("Particle System")]
+    public ParticleSystem drillParticles; // particle system for drilling effect
+    
     private float currentSpeed = 0f;
     private MiningTriggerNew miningTrigger;
     private bool wasMiningSoundPlaying = false;
@@ -42,6 +45,18 @@ public class DrillRotation : MonoBehaviour
         if (drillSparks != null)
         {
             drillSparks.gameObject.SetActive(false); // Hide initially
+        }
+        
+        // Find ParticleSystem if not assigned
+        if (drillParticles == null)
+        {
+            drillParticles = GetComponentInChildren<ParticleSystem>();
+        }
+        
+        // Stop particles initially
+        if (drillParticles != null)
+        {
+            drillParticles.Stop();
         }
         
         currentSpeed = idleSpeed;
@@ -107,6 +122,12 @@ public class DrillRotation : MonoBehaviour
                 lastSparkTime = Time.time;
             }
             
+            // Start particle system when mining
+            if (drillParticles != null && !drillParticles.isPlaying)
+            {
+                drillParticles.Play();
+            }
+            
             // Log mining state change
             if (!wasMiningSoundPlaying)
             {
@@ -137,6 +158,12 @@ public class DrillRotation : MonoBehaviour
             if (drillSparks != null)
             {
                 drillSparks.gameObject.SetActive(false);
+            }
+            
+            // Stop particle system when not mining
+            if (drillParticles != null && drillParticles.isPlaying)
+            {
+                drillParticles.Stop();
             }
             
             if (wasMiningSoundPlaying)
