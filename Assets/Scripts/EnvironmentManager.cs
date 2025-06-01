@@ -54,10 +54,6 @@ public class EnvironmentManager : MonoBehaviour
                 GenerateSegmentSet(lastGeneratedX);
                 lastGeneratedX += segmentWidth;
             }
-            
-            // Remove old segments behind
-            float leftEdge = playerX - removeBackDistance;
-            RemoveOldSegments(leftEdge);
         }
     }
     
@@ -113,13 +109,6 @@ public class EnvironmentManager : MonoBehaviour
             float scaleX = targetWidth / spriteWidth;
             segment.transform.localScale = new Vector3(scaleX, segment.transform.localScale.y, 1);
         }
-    }
-    
-    void RemoveOldSegments(float leftEdge)
-    {
-        RemoveSegmentsBehind(floorSegments, leftEdge);
-        RemoveSegmentsBehind(backgroundSegments, leftEdge);
-        RemoveSegmentsBehind(ceilingSegments, leftEdge);
     }
     
     void RemoveSegmentsBehind(List<GameObject> segments, float leftEdge)

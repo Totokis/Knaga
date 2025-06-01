@@ -559,6 +559,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8283798291704996397, guid: aed89ab75a077d54abda7d60e573d3fd, type: 3}
+      propertyPath: m_SortingOrder
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -718,7 +722,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 50
   m_Sprite: {fileID: -4863336276314997047, guid: c0d009e7b1ae266408d55b0d793dcd74, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -1970,7 +1974,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1124fc46574e18847a113ef5fb874681, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  screenOffset: {x: 114.5, y: 36.3}
+  screenOffset: {x: 329.6, y: 111.2}
   itemSpacing: 10
   spriteSize: 0.11
   textSize: 10
@@ -3496,6 +3500,10 @@ PrefabInstance:
     - target: {fileID: 392067798536691527, guid: be55d107609e7b442b894b4ae439c356, type: 3}
       propertyPath: m_Name
       value: SzybKopalniany
+      objectReference: {fileID: 0}
+    - target: {fileID: 1120645866303143915, guid: be55d107609e7b442b894b4ae439c356, type: 3}
+      propertyPath: m_SortingOrder
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1301661091481395212, guid: be55d107609e7b442b894b4ae439c356, type: 3}
       propertyPath: menuPanel
