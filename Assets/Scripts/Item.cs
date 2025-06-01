@@ -19,7 +19,7 @@ public class Item
     
     public Item Clone()
     {
-        Item newItem = new Item(itemName, amount);
+        Item newItem = new Item(itemName, amount, itemType);
         newItem.icon = icon;
         newItem.color = color;
         return newItem;
