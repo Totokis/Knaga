@@ -4,6 +4,7 @@ using UnityEngine.InputSystem;
 public class WoodenStropPlacementPoint : MonoBehaviour
 {
     [Header("Settings")]
+    public Sprite sprite;
     [SerializeField] private float interactionDistance = 3f;
     [SerializeField] public bool hasStropInstalled = false;
     [SerializeField] private float emptyAlpha = 0.14f;
@@ -37,7 +38,7 @@ public class WoodenStropPlacementPoint : MonoBehaviour
         {
             if (playerInventory != null && playerInventory.HasItem("Wooden Strop") && messageDisplay != null)
             {
-                messageDisplay.ShowPickupSprite(); // Use existing sprite
+                messageDisplay.ShowSprite(sprite); // Use existing sprite
             }
         }
 
@@ -45,6 +46,7 @@ public class WoodenStropPlacementPoint : MonoBehaviour
         {
             if (playerInventory != null && playerInventory.HasItem("Wooden Strop"))
             {
+                messageDisplay.ShowSprite(sprite); // Use existing sprite
                 InstallStrop();
             }
         }
