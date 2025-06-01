@@ -39,16 +39,17 @@ public class CraftingTable : MonoBehaviour
 
         if (isInRange && Keyboard.current.eKey.wasPressedThisFrame)
         {
-            Item newItem = player.GetComponent<PlayerInventory>().GetCurrentItem();
-            if(newItem != null)
-            {
-                if (CurrentItem != null)
-                {
-                    // CRAFT
-                }
-                else
-                    CurrentItem = newItem;
-            }
+            // TODO: Fix this - GetCurrentItem() method doesn't exist in PlayerInventory
+            // Item newItem = player.GetComponent<PlayerInventory>().GetCurrentItem();
+            // if(newItem != null)
+            // {
+            //     if (CurrentItem != null)
+            //     {
+            //         // CRAFT
+            //     }
+            //     else
+            //         CurrentItem = newItem;
+            // }
         }
     }
 

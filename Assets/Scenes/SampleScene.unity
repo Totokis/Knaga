@@ -119,6 +119,11 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &111880499 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 392067798536691527, guid: be55d107609e7b442b894b4ae439c356, type: 3}
+  m_PrefabInstance: {fileID: 9157117031002950943}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &135023445
 GameObject:
   m_ObjectHideFlags: 0
@@ -1461,6 +1466,7 @@ GameObject:
   m_Component:
   - component: {fileID: 892174262}
   - component: {fileID: 892174263}
+  - component: {fileID: 892174264}
   m_Layer: 0
   m_Name: Wall
   m_TagString: Untagged
@@ -1497,7 +1503,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   wallSegmentPrefab: {fileID: 5460429056039791012, guid: 25df9f69ae9998447be0baaeb7e97fa7, type: 3}
-  szybPrefab: {fileID: 392067798536691527, guid: be55d107609e7b442b894b4ae439c356, type: 3}
+  szybPrefab: {fileID: 111880499}
   numberOfSegments: 20
   segmentSpacing: 6
   itemDropSprite: {fileID: -228819513787663229, guid: c8d5dca76524bb241a76d80d1930bc86, type: 3}
@@ -1505,6 +1511,20 @@ MonoBehaviour:
   minDropAmount: 1
   maxDropAmount: 3
   itemColor: {r: 0.5, g: 0.5, b: 0.5, a: 1}
+--- !u!114 &892174264
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 892174261}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a4966045299bc8c4d84ad50f93c8c819, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  darkColor: {r: 0, g: 0, b: 0, a: 1}
+  autoUpdate: 1
 --- !u!1 &904820675
 GameObject:
   m_ObjectHideFlags: 0
@@ -2084,6 +2104,37 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1427516488}
   m_CullTransparentMesh: 1
+--- !u!1 &1464775941
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1464775942}
+  m_Layer: 0
+  m_Name: WallColorManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1464775942
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1464775941}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1592990434
 GameObject:
   m_ObjectHideFlags: 0
@@ -3149,3 +3200,4 @@ SceneRoots:
   - {fileID: 294078967}
   - {fileID: 566879307}
   - {fileID: 3695408866375212438}
+  - {fileID: 1464775942}
