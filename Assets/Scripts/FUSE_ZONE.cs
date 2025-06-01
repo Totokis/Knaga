@@ -31,6 +31,7 @@ public class FUSE_ZONE : MonoBehaviour
         {
             LeanTween.cancel(item.gameObject);
             FindAnyObjectByType<PlayerInventory>().RemoveItem(item.item.itemName, 1);
+            item.FuseTime();
         }
         StartCoroutine(WhirlAndDisappear());
         

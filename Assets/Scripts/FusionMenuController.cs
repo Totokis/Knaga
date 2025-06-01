@@ -45,8 +45,6 @@ public class FusionMenuController: MonoBehaviour
         }
 
     }
-
-
     public void CloseTable()
     {
         foreach (var itemMono in _itemMonos)
