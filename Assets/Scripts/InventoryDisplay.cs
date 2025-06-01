@@ -64,6 +64,7 @@ public class InventoryDisplay : MonoBehaviour
         MeshRenderer bgRenderer = background.GetComponent<MeshRenderer>();
         bgRenderer.material = Maberial;
         bgRenderer.sortingLayerName = "UI";
+        bgRenderer.gameObject.layer = LayerMask.NameToLayer("UI");
         bgRenderer.sortingOrder = 998;
     }
 
@@ -149,6 +150,8 @@ public class InventoryDisplay : MonoBehaviour
         itemUI.spriteRenderer.sprite = item.icon;
         itemUI.spriteRenderer.material = Maberial;
         itemUI.spriteRenderer.sortingLayerName = "UI";
+        itemUI.itemObject.layer = LayerMask.NameToLayer("UI");
+        spriteObj.layer = LayerMask.NameToLayer("UI");
         itemUI.spriteRenderer.sortingOrder = 1000;
 
         // Skalowanie sprite'a
@@ -178,6 +181,7 @@ public class InventoryDisplay : MonoBehaviour
         if (textRenderer != null)
         {
             textRenderer.sortingLayerName = "UI";
+            textRenderer.gameObject.layer = LayerMask.NameToLayer("UI");
             textRenderer.sortingOrder = 1000;
         }
 
