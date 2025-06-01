@@ -97,7 +97,7 @@ public class ExchangeMenuController : MonoBehaviour
             DropItem(itemName, itemSprite);
 
             if (messageDisplay != null)
-                messageDisplay.ShowMessage("Exchanged " + cost + " Ore for " + itemName + "!", Color.green, 2f);
+                messageDisplay.ShowTradeSprite();
 
             UpdateOreDisplay();
             UpdateButtonStates();

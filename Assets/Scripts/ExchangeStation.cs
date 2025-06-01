@@ -35,7 +35,7 @@ public class ExchangeStation : MonoBehaviour
         // Show prompt when entering range
         if (isInRange && !wasInRange && messageDisplay != null)
         {
-            messageDisplay.ShowInteraction("Press E to open Exchange Station");
+            messageDisplay.ShowTradeSprite();
         }
         
         if (isInRange && Keyboard.current.eKey.wasPressedThisFrame)

@@ -72,7 +72,7 @@ public class ItemPickup : MonoBehaviour
         {
             if (isInRange && messageDisplay != null)
             {
-                messageDisplay.ShowPickupPrompt(itemData.itemName);
+                messageDisplay.ShowPickupSprite();
             }
         }
 
@@ -116,7 +116,7 @@ public class ItemPickup : MonoBehaviour
             {
                 if (messageDisplay != null)
                 {
-                    messageDisplay.ShowItemPickedUp(itemData.itemName, itemData.amount);
+                    messageDisplay.ShowPickupSprite();
                 }
                 else
                 {
@@ -128,7 +128,7 @@ public class ItemPickup : MonoBehaviour
             {
                 if (messageDisplay != null)
                 {
-                    messageDisplay.ShowInventoryFull();
+                    //messageDisplay.ShowInventoryFull();
                 }
                 else
                 {

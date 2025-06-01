@@ -19,6 +19,7 @@ public class CraftingTable : MonoBehaviour
 
     [Header("Item Sprites")]
     public Sprite metalSprite;
+    public Sprite fushionSprite;
 
     void Start()
     {
@@ -43,7 +44,7 @@ public class CraftingTable : MonoBehaviour
         // Show prompt when entering range
         if (isInRange && !wasInRange && messageDisplay != null && !IsOpened())
         {
-            messageDisplay.ShowInteraction("Press E to put item to fusion");
+            messageDisplay.ShowSprite(fushionSprite);
         }
 
         if (isInRange && Keyboard.current.eKey.wasPressedThisFrame && !IsOpened())
