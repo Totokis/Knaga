@@ -1,29 +1,26 @@
 using UnityEngine;
-using TMPro;
 using System.Collections;
 
 public class PlayerMessageDisplay : MonoBehaviour
 {
-    [Header("Message Settings")]
-    public float messageHeight = 1.5f; // Wysokość nad graczem
-    public float messageDuration = 3f; // Czas wyświetlania
-    public float fadeSpeed = 2f;
-    public float textSize = 18f;
-    public Color defaultColor = Color.white;
+    [Header("Sprite Settings")]
+    public float spriteHeight = 1.5f; // Wysokość nad graczem
+    public float spriteDuration = 3f; // Czas wyświetlania
+    public float fadeSpeed = 0.5f;
+    public float spriteSize = 1f;
 
-    
-    [Header("Item Sprites")]
-    public Sprite woodSprite;
-    public Sprite oilSprite;
-    public Sprite metalSprite;
-    
-    private TextMeshPro messageText;
+    [Header("Sprites")]
+    public Sprite tradeSprite;
+    public Sprite pickUpSprite;
+    public Material Maberial;
+
+    private SpriteRenderer spriteRenderer;
     private Transform playerTransform;
-    private Coroutine currentMessageCoroutine;
-    
+    private Coroutine currentSpriteCoroutine;
+
     private static PlayerMessageDisplay instance;
     public static PlayerMessageDisplay Instance => instance;
-    
+
     void Awake()
     {
         if (instance == null)
@@ -36,7 +33,7 @@ public class PlayerMessageDisplay : MonoBehaviour
             return;
         }
     }
-    
+
     void Start()
     {
         // Znajdź gracza
@@ -45,109 +42,107 @@ public class PlayerMessageDisplay : MonoBehaviour
         {
             playerTransform = player.transform;
         }
-        
-        SetupMessageDisplay();
+
+        SetupSpriteDisplay();
     }
-    
-    void SetupMessageDisplay()
+
+    void SetupSpriteDisplay()
     {
-        // Tworzenie obiektu dla tekstu
-        GameObject textObj = new GameObject("PlayerMessage");
-        textObj.transform.parent = transform;
-        
-        // Dodanie TextMeshPro
-        messageText = textObj.AddComponent<TextMeshPro>();
-        messageText.fontSize = textSize;
-        messageText.color = defaultColor;
-        messageText.alignment = TextAlignmentOptions.Center;
-        messageText.text = "";
-        
+        // Tworzenie obiektu dla sprite'a
+        GameObject spriteObj = new GameObject("PlayerSprite");
+        spriteObj.transform.parent = transform;
+
+        // Dodanie SpriteRenderer
+        spriteRenderer = spriteObj.AddComponent<SpriteRenderer>();
+        spriteRenderer.color = Color.white;
+        spriteRenderer.material = Maberial;
+
         // Ustawienie sortowania żeby było na wierzchu
-        messageText.sortingOrder = 1001;
-        MeshRenderer textRenderer = messageText.GetComponent<MeshRenderer>();
-        if (textRenderer != null)
-        {
-            textRenderer.sortingLayerName = "UI";
-            textRenderer.sortingOrder = 1001;
-        }
-        
-        // Włączenie outline dla lepszej widoczności
-        messageText.fontMaterial.EnableKeyword("OUTLINE_ON");
-        messageText.outlineColor = Color.black;
-        messageText.outlineWidth = 0.2f;
+        spriteRenderer.sortingLayerName = "UI";
+        spriteRenderer.sortingOrder = 1001;
+
+        // Ustawienie rozmiaru
+        spriteObj.transform.localScale = Vector3.one * spriteSize;
+
+        // Początkowo ukryty
+        spriteRenderer.color = new Color(1f, 1f, 1f, 0f);
     }
-    
+
     void Update()
     {
-        if (playerTransform != null && messageText != null)
+        if (playerTransform != null && spriteRenderer != null)
         {
             // Pozycjonowanie nad graczem
-            Vector3 messagePos = playerTransform.position + Vector3.up * messageHeight;
-            transform.position = messagePos;
+            Vector3 spritePos = playerTransform.position + Vector3.up * spriteHeight;
+            transform.position = spritePos;
         }
     }
-    
-    public void ShowMessage(string message, Color? color = null, float? duration = null)
+
+    public void ShowSprite(Sprite sprite, float? duration = null)
     {
-        if (messageText == null) return;
-        
-        // Zatrzymaj poprzednią wiadomość
-        if (currentMessageCoroutine != null)
+        if (spriteRenderer == null || sprite == null) return;
+
+        // Zatrzymaj poprzedni sprite
+        if (currentSpriteCoroutine != null)
         {
-            StopCoroutine(currentMessageCoroutine);
+            StopCoroutine(currentSpriteCoroutine);
         }
-        
-        // Ustaw kolor
-        Color msgColor = color ?? defaultColor;
-        float msgDuration = duration ?? messageDuration;
-        
+
+        float spriteDur = duration ?? spriteDuration;
+
         // Rozpocznij wyświetlanie
-        currentMessageCoroutine = StartCoroutine(DisplayMessage(message, msgColor, msgDuration));
+        currentSpriteCoroutine = StartCoroutine(DisplaySprite(sprite, spriteDur));
     }
-    
-    private IEnumerator DisplayMessage(string message, Color color, float duration)
+
+    private IEnumerator DisplaySprite(Sprite sprite, float duration)
     {
-        // Pokaż wiadomość
-        messageText.text = message;
-        messageText.color = color;
-        messageText.alpha = 1f;
-        
+        // Pokaż sprite
+        spriteRenderer.sprite = sprite;
+        spriteRenderer.color = Color.white;
+
         // Czekaj
         yield return new WaitForSeconds(duration);
-        
+
         // Zanikanie
         float fadeTimer = 0f;
+        Color startColor = spriteRenderer.color;
         while (fadeTimer < 1f)
         {
             fadeTimer += Time.deltaTime * fadeSpeed;
-            messageText.alpha = Mathf.Lerp(1f, 0f, fadeTimer);
+            float alpha = Mathf.Lerp(1f, 0f, fadeTimer);
+            spriteRenderer.color = new Color(startColor.r, startColor.g, startColor.b, alpha);
             yield return null;
         }
-        
-        // Wyczyść tekst
-        messageText.text = "";
-        messageText.alpha = 1f;
-        currentMessageCoroutine = null;
+
+        // Ukryj sprite
+        spriteRenderer.color = new Color(1f, 1f, 1f, 0f);
+        spriteRenderer.sprite = null;
+        currentSpriteCoroutine = null;
     }
-    
-    // Metody pomocnicze dla różnych typów wiadomości
-    public void ShowPickupPrompt(string itemName)
+
+    // Metody pomocnicze dla różnych typów sprite'ów
+    public void ShowPickupSprite()
     {
-        ShowMessage($"Press E to pick up {itemName}", Color.yellow, 2f);
+        ShowSprite(pickUpSprite, 2f);
     }
-    
-    public void ShowInventoryFull()
+
+    public void ShowTradeSprite()
     {
-        ShowMessage("Inventory full!", Color.red, 2f);
+        ShowSprite(tradeSprite, 2.5f);
     }
-    
-    public void ShowItemPickedUp(string itemName, int amount)
+
+    public void HideSprite()
     {
-        ShowMessage($"Picked up {itemName} x{amount}", Color.green, 2f);
-    }
-    
-    public void ShowInteraction(string message)
-    {
-        ShowMessage(message, Color.cyan, 2.5f);
+        if (currentSpriteCoroutine != null)
+        {
+            StopCoroutine(currentSpriteCoroutine);
+            currentSpriteCoroutine = null;
+        }
+
+        if (spriteRenderer != null)
+        {
+            spriteRenderer.color = new Color(1f, 1f, 1f, 0f);
+            spriteRenderer.sprite = null;
+        }
     }
 }
